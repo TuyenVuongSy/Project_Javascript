@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,88 +10,90 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header>
-        <h1>Bản Đồ Ăn</h1>
-        <p>Khám phá quán ngon quanh bạn cùng Tuyến nhé!</p>
-        <nav>
-            <ul>
-                <li><a href="#home">Trang Chủ</a></li>
-                <li><a href="#stories">Blog</a></li>
-                <li><a href="#list">Danh Sách Quán</a></li>
-                <li><a href="#contact">Liên Hệ</a></li>
-            </ul>
-        </nav>
+        <div class="header-container">
+            <div class="header-logo">
+                <img src="anhLogo.png" alt="Bản Đồ Ăn Logo">
+                <h1>Bản Đồ Ăn</h1>
+                <p>Khám phá quán ngon quanh bạn cùng Tuyến nhé!</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="project.html">Home</a></li>
+                    <li><a href="blog/blog.html">Blog</a></li>
+                    <li><a href="food map/bandoan.html">Danh Sách Quán</a></li>
+                    <li><a href="book/book.html">Sách</a></li>
+                    <li><a href="contact/contact.html">Liên Hệ</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-
-    <section class="search-bar">
-        <input type="text" id="searchBox" placeholder="Tìm kiếm món ăn hoặc địa điểm...">
-        <button><i class="fas fa-search"></i> Tìm Kiếm</button>
-    </section>
-
-    <section class="filters">
-        <select id="categoryFilter">
-            <option value="">Tất Cả Món</option>
-            <option value="Bún">Bún</option>
-            <option value="Phở">Phở</option>
-            <option value="Cơm">Cơm</option>
-            <option value="Bánh">Bánh</option>
-            <option value="Mỳ">Mỳ</option>
-            <option value="Xôi">Xôi</option>
-            <option value="Miến">Miến</option>
-            <option value="Ăn vặt">Ăn vặt</option>
-            <option value="Đồ uống">Đồ uống</option>
-        </select>
-        <select id="areaFilter">
-            <option value="">Tất Cả Khu Vực</option>
-            <option value="Ba Đình">Ba Đình</option>
-            <option value="Bắc Từ Liêm">Bắc Từ Liêm</option>
-            <option value="Cầu Giấy">Cầu Giấy</option>
-            <option value="Đống Đa">Đống Đa</option>
-            <option value="Hai Bà Trưng">Hai Bà Trưng</option>
-            <option value="Hà Đông">Hà Đông</option>
-            <option value="Hoàn Kiếm">Hoàn Kiếm</option>
-            <option value="Hoàng Mai">Hoàng Mai</option>
-            <option value="Long Biên">Long Biên</option>
-            <option value="Nam Từ Liêm">Nam Từ Liêm</option>
-            <option value="Tây Hồ">Tây Hồ</option>
-            <option value="Thanh Xuân">Thanh Xuân</option>
-        </select>
-    </section>
 
     <section id="stories">
         <h2>Chuyện Hà Nội</h2>
         <div class="story">
             <h3>Phở - Hồn Cốt Hà Nội</h3>
-            <p>Phở Hà Nội không chỉ là một món ăn, mà là một câu chuyện về sự tinh tế. Nước dùng trong veo, ninh từ xương bò qua hàng giờ, hòa quyện với hương thơm của thảo quả, hồi, và quế. Người Hà Nội ăn phở không vội, nhấm nháp từng thìa nước, thưởng thức sợi bánh phở mềm mà dai. Từ Phở Thìn Lò Đúc đến Phở Gà Tạ Hiện, mỗi quán là một chương trong cuốn sách ẩm thực Thủ đô.</p>
+            <p>Phở Hà Nội không chỉ là một món ăn, mà là một câu chuyện về sự tinh tế. Nước dùng trong veo, ninh từ
+                xương bò qua hàng giờ, hòa quyện với hương thơm của thảo quả, hồi, và quế. Người Hà Nội ăn phở không
+                vội, nhấm nháp từng thìa nước, thưởng thức sợi bánh phở mềm mà dai. Từ Phở Thìn Lò Đúc đến Phở Gà Tạ
+                Hiện, mỗi quán là một chương trong cuốn sách ẩm thực Thủ đô.</p>
+            <a href="blog/pho.html" class="read-more">Đọc thêm</a>
         </div>
         <div class="story">
             <h3>Bún Chả - Hương Vị Phố Cổ</h3>
-            <p>Đi dọc phố cổ Hoàn Kiếm, mùi khói than hoa từ những quán bún chả như kéo chân người lữ khách. Chả nướng vàng ươm, ăn cùng nước mắm chua ngọt và đu đủ muối, tạo nên một bản giao hưởng vị giác. Bún Chả Hàng Quạt, một địa chỉ quen thuộc, không chỉ nuôi dưỡng cơ thể mà còn lưu giữ ký ức về Hà Nội xưa.</p>
+            <p>Đi dọc phố cổ Hoàn Kiếm, mùi khói than hoa từ những quán bún chả như kéo chân người lữ khách. Chả nướng
+                vàng ươm, ăn cùng nước mắm chua ngọt và đu đủ muối, tạo nên một bản giao hưởng vị giác. Bún Chả Hàng
+                Quạt, một địa chỉ quen thuộc, không chỉ nuôi dưỡng cơ thể mà còn lưu giữ ký ức về Hà Nội xưa.</p>
+            <a href="blog/buncha.html" class="read-more">Đọc thêm</a>
         </div>
         <div class="story">
             <h3>Chả Cá - Tinh Hoa Láng Hạ</h3>
-            <p>Chả Cá Láng Hạ là biểu tượng của sự cầu kỳ trong ẩm thực Hà Nội. Cá lăng tươi được tẩm ướp nghệ, riềng, rồi chiên vàng trên chảo nhỏ ngay tại bàn. Ăn kèm bún, rau thơm, lạc rang, và mắm tôm đánh sủi bọt, món ăn này kể câu chuyện về sự sáng tạo của người Hà Nội, biến nguyên liệu đơn sơ thành tuyệt phẩm.</p>
+            <p>Chả Cá Láng Hạ là biểu tượng của sự cầu kỳ trong ẩm thực Hà Nội. Cá lăng tươi được tẩm ướp nghệ, riềng,
+                rồi chiên vàng trên chảo nhỏ ngay tại bàn. Ăn kèm bún, rau thơm, lạc rang, và mắm tôm đánh sủi bọt, món
+                ăn này kể câu chuyện về sự sáng tạo của người Hà Nội, biến nguyên liệu đơn sơ thành tuyệt phẩm.</p>
+            <a href="blog/chaca.html" class="read-more">Đọc thêm</a>
         </div>
         <div class="story">
             <h3>Cốm - Hương Thu Hà Nội</h3>
-            <p>Cốm, hạt ngọc xanh của mùa thu Hà Nội, là món quà quê gói trọn hương đồng nội. Từ làng Vòng, cốm được làm từ lúa nếp non, rang và giã thủ công, giữ được vị ngọt thanh và mùi thơm dịu. Người Hà Nội thưởng cốm với chuối chín, nhâm nhi trong những buổi chiều se lạnh, hay mua cốm gói lá sen làm quà. Cốm không chỉ là thức quà, mà là ký ức tuổi thơ và nét tinh hoa của đất Thăng Long.</p>
+            <p>Cốm, hạt ngọc xanh của mùa thu Hà Nội, là món quà quê gói trọn hương đồng nội. Từ làng Vòng, cốm được làm
+                từ lúa nếp non, rang và giã thủ công, giữ được vị ngọt thanh và mùi thơm dịu. Người Hà Nội thưởng cốm
+                với chuối chín, nhâm nhi trong những buổi chiều se lạnh, hay mua cốm gói lá sen làm quà. Cốm không chỉ
+                là thức quà, mà là ký ức tuổi thơ và nét tinh hoa của đất Thăng Long.</p>
+            <a href="blog/com.html" class="read-more">Đọc thêm</a>
         </div>
         <div class="story">
             <h3>Bánh Mì - Di Sản Phố Hội</h3>
-            <p>Bánh mì Hà Nội mang hồn Việt trong lớp vỏ giòn rụm, hòa quyện với pate thơm lừng, thịt nguội, rau thơm và chút tương ớt cay nồng. Từ những gánh hàng rong trên phố Lò Sũ đến Bánh Mì Bà Dần nổi tiếng, mỗi ổ bánh mì là một câu chuyện về sự giao thoa văn hóa. Người Hà Nội ăn bánh mì mọi lúc, từ bữa sáng vội vã đến bữa xế chiều, như một nét sinh hoạt không thể thiếu.</p>
+            <p>Bánh mì Hà Nội mang hồn Việt trong lớp vỏ giòn rụm, hòa quyện với pate thơm lừng, thịt nguội, rau thơm và
+                chút tương ớt cay nồng. Từ những gánh hàng rong trên phố Lò Sũ đến Bánh Mì Bà Dần nổi tiếng, mỗi ổ bánh
+                mì là một câu chuyện về sự giao thoa văn hóa. Người Hà Nội ăn bánh mì mọi lúc, từ bữa sáng vội vã đến
+                bữa xế chiều, như một nét sinh hoạt không thể thiếu.</p>
+            <a href="blog/banhmi.html" class="read-more">Đọc thêm</a>
         </div>
         <div class="story">
             <h3>Cà Phê Sáng - Hơi Thở Hà Nội</h3>
-            <p>Cà phê sáng ở Hà Nội không chỉ là thức uống, mà là một nghi thức. Từ quán vỉa hè phố Đinh Liệt đến Cà Phê Giảng cổ kính, người Hà Nội ngồi bên ly cà phê đen đá, nhâm nhi và ngắm phố phường. Hương cà phê đậm đà hòa cùng tiếng rao báo và tiếng xe cộ, tạo nên một bản nhạc sáng sớm. Cà phê là nơi câu chuyện bắt đầu, là nhịp sống của Thủ đô.</p>
+            <p>Cà phê sáng ở Hà Nội không chỉ là thức uống, mà là một nghi thức. Từ quán vỉa hè phố Đinh Liệt đến Cà Phê
+                Giảng cổ kính, người Hà Nội ngồi bên ly cà phê đen đá, nhâm nhi và ngắm phố phường. Hương cà phê đậm đà
+                hòa cùng tiếng rao báo và tiếng xe cộ, tạo nên một bản nhạc sáng sớm. Cà phê là nơi câu chuyện bắt đầu,
+                là nhịp sống của Thủ đô.</p>
+            <a href="blog/cafesang.html" class="read-more">Đọc thêm</a>
         </div>
         <div class="story">
             <h3>Đồ Ăn Vặt - Vị Ngon Phố Phường</h3>
-            <p>Đồ ăn vặt Hà Nội là thế giới của những món nhỏ mà đầy mê hoặc. Nem chua rán ở Tạ Hiện, bánh gối giòn tan ở Hàng Bông, hay ô mai chua ngọt ở Hàng Đường, mỗi món là một ký ức tuổi thơ. Người Hà Nội tụ tập bạn bè, nhâm nhi ăn vặt, trò chuyện rôm rả, làm nên nét sinh động của phố cổ. Ăn vặt không chỉ no bụng, mà còn nuôi dưỡng tâm hồn.</p>
+            <p>Đồ ăn vặt Hà Nội là thế giới của những món nhỏ mà đầy mê hoặc. Nem chua rán ở Tạ Hiện, bánh gối giòn tan
+                ở Hàng Bông, hay ô mai chua ngọt ở Hàng Đường, mỗi món là một ký ức tuổi thơ. Người Hà Nội tụ tập bạn
+                bè, nhâm nhi ăn vặt, trò chuyện rôm rả, làm nên nét sinh động của phố cổ. Ăn vặt không chỉ no bụng, mà
+                còn nuôi dưỡng tâm hồn.</p>
+            <a href="blog/doanvat.html" class="read-more">Đọc thêm</a>
         </div>
         <div class="story">
             <h3>Kem - Mát Lành Ngày Hè</h3>
-            <p>Kem Hà Nội là ký ức ngọt ngào của những ngày hè oi ả. Từ que kem Tràng Tiền mát lạnh, tan chảy trên đầu lưỡi, đến ly kem dừa Hồ Gươm thơm béo, mỗi vị kem là một niềm vui giản dị. Người Hà Nội, từ trẻ nhỏ đến người lớn, tụ họp dưới bóng cây, thưởng thức kem và kể chuyện đời. Kem không chỉ giải nhiệt, mà còn là sợi dây kết nối những khoảnh khắc yêu thương.</p>
+            <p>Kem Hà Nội là ký ức ngọt ngào của những ngày hè oi ả. Từ que kem Tràng Tiền mát lạnh, tan chảy trên đầu
+                lưỡi, đến ly kem dừa Hồ Gươm thơm béo, mỗi vị kem là một niềm vui giản dị. Người Hà Nội, từ trẻ nhỏ đến
+                người lớn, tụ họp dưới bóng cây, thưởng thức kem và kể chuyện đời. Kem không chỉ giải nhiệt, mà còn là
+                sợi dây kết nối những khoảnh khắc yêu thương.</p>
+            <a href="blog/kem.html" class="read-more">Đọc thêm</a>
         </div>
     </section>
 
@@ -102,25 +105,24 @@
                 <h3>Bún Chả Hàng Quạt</h3>
                 <p>Địa chỉ: 74 Hàng Quạt, Hoàn Kiếm, Hà Nội</p>
                 <p class="rating">🌟 4.3/5</p>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.0033569831685!2d105.84614727503156!3d21.032551680617708!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135abe7cf0fc5f3%3A0xa032093ae764d0cc!2zQsO6biBDaOG6oyBIw6BuZyBRdeG6oXQ!5e0!3m2!1svi!2s!4v1747839224299!5m2!1svi!2s" width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
         <div class="place" data-category="Phở" data-area="Hai Bà Trưng">
-            <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200_webp/05daa1203206085.6693cc5880a9e.png" alt="Phở Thìn Lò Đúc" loading="lazy">
+            <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200_webp/05daa1203206085.6693cc5880a9e.png"
+                alt="Phở Thìn Lò Đúc" loading="lazy">
             <div class="place-content">
                 <h3>Phở Thìn Lò Đúc</h3>
                 <p>Địa chỉ: 13 Lò Đúc, Hai Bà Trưng, Hà Nội</p>
                 <p class="rating">🌟 4.3/5</p>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.364141392508!2d105.85272607503111!3d21.01811098062858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135abf2871ac63d%3A0xbd2679a740673cd7!2zMTMgUC4gTMOyIMSQw7pjLCBOZ8O0IFRow6wgTmjhuq1tLCBIYWkgQsOgIFRyxrBuZywgSMOgIE7hu5lpLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1747839067418!5m2!1svi!2s" width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
         <div class="place" data-category="Mỳ" data-area="Cầu Giấy">
-            <img src="https://halotravel.vn/wp-content/uploads/2020/08/mi-van-than-ha-noi-3.jpg" alt="Mỳ Vằn Thắn Xuân" loading="lazy">
+            <img src="https://halotravel.vn/wp-content/uploads/2020/08/mi-van-than-ha-noi-3.jpg" alt="Mỳ Vằn Thắn Xuân"
+                loading="lazy">
             <div class="place-content">
                 <h3>Mỳ Vằn Thắn Xuân</h3>
                 <p>Địa chỉ: 101B3 Tô Hiệu, Cầu Giấy, Hà Nội</p>
                 <p class="rating">🌟 4.4/5</p>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.7041608899035!2d105.79280997503193!3d21.044520080608805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135abd3f4f4df4f%3A0x586f177450715804!2zTeG7syBW4bqxbiBUaOG6r24gLSBYdcOibiBI4bunIFRp4bq_dQ!5e0!3m2!1svi!2s!4v1747839126788!5m2!1svi!2s" width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
         <div class="place" data-category="Đồ uống" data-area="Tây Hồ">
@@ -129,7 +131,6 @@
                 <h3>Matcha Latte</h3>
                 <p>Địa chỉ: 272 Võ Chí Công, Tây Hồ, Hà Nội</p>
                 <p class="rating">🌟 4.2/5</p>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14891.635530131096!2d105.80142884818974!3d21.07630115052581!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab38613e0d1d%3A0xb74b86d5e1751ad1!2sStarbucks%20Lotte%20West%20Lake!5e0!3m2!1svi!2s!4v1747839197827!5m2!1svi!2s" width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
         <div class="place" data-category="Bánh" data-area="Hai Bà Trưng">
@@ -138,106 +139,105 @@
                 <h3>Bánh Mì Nem Khoai</h3>
                 <p>Địa chỉ: 08 ngõ 28 Hương Viên, Hai Bà Trưng, Hà Nội</p>
                 <p class="rating">🌟 4.9/5</p>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.523271190659!2d105.85556068647011!3d21.01173866515587!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135abf48a1d2799%3A0x19108abfb43ad46a!2zOCBOZy4gMjggUC4gSMawxqFuZyBWacOqbiwgxJDhu5NuZyBOaMOibiwgSGFpIELDoCBUcsawbmcsIEjDoCBO4buZaSwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1747839266962!5m2!1svi!2s" width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
         <div class="place" data-category="Xôi" data-area="Thanh Xuân">
-            <img src="https://toplist.vn/images/800px/xoi-suon-cay-truong-chinh-963078.jpg" alt="Xôi Sườn Cay" loading="lazy">
+            <img src="https://toplist.vn/images/800px/xoi-suon-cay-truong-chinh-963078.jpg" alt="Xôi Sườn Cay"
+                loading="lazy">
             <div class="place-content">
                 <h3>Xôi Sườn Cay</h3>
                 <p>Địa chỉ: 628 Trường Chinh, Thanh Xuân, Hà Nội</p>
                 <p class="rating">🌟 4.1/5</p>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d465.5934065605203!2d105.82128081032508!3d21.002766259147535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac5fd530f63d%3A0x2bb0030ca9a453d6!2zWMO0aSBTxrDhu51uIENheQ!5e0!3m2!1svi!2s!4v1747839301331!5m2!1svi!2s" width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
         <div class="place" data-category="Mỳ" data-area="Ba Đình">
-            <img src="https://alltop.vn/backend/media/images/posts/1284/Ga_Tan_Co_Bien-101747.jpg" alt="Mỳ Gà Tần Cô Biên" loading="lazy">
+            <img src="https://alltop.vn/backend/media/images/posts/1284/Ga_Tan_Co_Bien-101747.jpg"
+                alt="Mỳ Gà Tần Cô Biên" loading="lazy">
             <div class="place-content">
                 <h3>Mỳ Gà Tần Cô Biên</h3>
                 <p>Địa chỉ: Ngõ 285 Đội Cấn, Quận Ba Đình, Hà Nội</p>
                 <p class="rating">🌟 4.2/5</p>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.9258036909864!2d105.81617807503167!3d21.035654580615464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab0d6b78f551%3A0x86c1fd9eb7c5f0ae!2zR8OgIFThuqduIEPDtCBCacOqbiDEkOG7mWkgQ-G6pW4!5e0!3m2!1svi!2s!4v1747839332664!5m2!1svi!2s" width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
         <div class="place" data-category="Bánh" data-area="Bắc Từ Liêm">
-            <img src="https://toplist.vn/images/800px/thanh-nga-banh-xeo-mien-trung-333632.jpg" alt="Bánh xèo Thanh Nga" loading="lazy">
+            <img src="https://toplist.vn/images/800px/thanh-nga-banh-xeo-mien-trung-333632.jpg" alt="Bánh xèo Thanh Nga"
+                loading="lazy">
             <div class="place-content">
                 <h3>Bánh xèo Thanh Nga</h3>
                 <p>Địa chỉ: 18 Ngõ 56, Lê Văn Hiến, Đức Thắng, Bắc Từ Liêm, Hà Nội</p>
                 <p class="rating">🌟 4.0/5</p>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3722.9287294528563!2d105.7710266750328!3d21.075508580585545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31345531aa23c067%3A0xce5661a3ffab3d2b!2zUXXDoW4gQsOhbmggWMOobyBUaGFuaCBOZ2E!5e0!3m2!1svi!2s!4v1747839357849!5m2!1svi!2s" width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
         <div class="place" data-category="Ăn vặt" data-area="Nam Từ Liêm">
-            <img src="https://cdn.tgdd.vn/2021/09/CookRecipe/Avatar/chan-ga-nuong-muoi-ot-dau-hao-thumbnail.jpg" alt="Chân Gà Nướng A Phương" loading="lazy">
+            <img src="https://cdn.tgdd.vn/2021/09/CookRecipe/Avatar/chan-ga-nuong-muoi-ot-dau-hao-thumbnail.jpg"
+                alt="Chân Gà Nướng A Phương" loading="lazy">
             <div class="place-content">
                 <h3>Chân Gà Nướng A Phương</h3>
                 <p>Địa chỉ: 22 ngõ 56 Lê Quang Đạo, Nam Từ Liêm, Hà Nội</p>
                 <p class="rating">🌟 4.4/5</p>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.529213260308!2d105.76735087503087!3d21.011500680633475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31345387125aebbd%3A0xfcb1d6a276b252fc!2zQ2jDom4gR8OgIE7GsOG7m25nIEEgUGjGsMahbmc!5e0!3m2!1svi!2s!4v1747839379162!5m2!1svi!2s" width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
         <div class="place" data-category="Cơm" data-area="Đống Đa">
-            <img src="https://hotel84.com/hotel84-images/news/photo/VYTX3J18M9_combo-suon-cot-let-comtam-s.jpg" alt="Cơm Tấm Sà Bì Chưởng" loading="lazy">
+            <img src="https://hotel84.com/hotel84-images/news/photo/VYTX3J18M9_combo-suon-cot-let-comtam-s.jpg"
+                alt="Cơm Tấm Sà Bì Chưởng" loading="lazy">
             <div class="place-content">
                 <h3>Cơm Tấm Sà Bì Chưởng</h3>
                 <p>Địa chỉ: 86 Nguyễn Văn Tuyết, Trung Liệt, Đống Đa, Hà Nội</p>
                 <p class="rating">🌟 4.8/5</p>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.5844675342746!2d105.81805967503081!3d21.009287580635146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab9abaef4d2d%3A0x95bdc5293ce90a6f!2zQ8ahbSBU4bqlbSBTw6AgQsOsIENoxrDhu59uZw!5e0!3m2!1svi!2s!4v1747839400026!5m2!1svi!2s" width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
         <div class="place" data-category="Phở" data-area="Hà Đông">
-            <img src="https://live2makan.com/wp-content/uploads/2022/08/l2m-vn-2207-pho10-06.jpg" alt="Phở 10 Lý Quốc Sư" loading="lazy">
+            <img src="https://live2makan.com/wp-content/uploads/2022/08/l2m-vn-2207-pho10-06.jpg"
+                alt="Phở 10 Lý Quốc Sư" loading="lazy">
             <div class="place-content">
                 <h3>Phở 10 Lý Quốc Sư</h3>
                 <p>Địa chỉ: lô 06 Tố Hữu, Vạn Phúc, Hà Đông, Hà Nội</p>
                 <p class="rating">🌟 4.1/5</p>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.214961225676!2d105.76977327921604!3d20.984018630772052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3134532f32a2c9bf%3A0xad982017e620cac6!2zUGjhu58gMTAgbMO9IHF14buRYyBzxrAgY8ahIHPhu58gMw!5e0!3m2!1svi!2s!4v1747839433554!5m2!1svi!2s" width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
         <div class="place" data-category="Miến" data-area="Long Biên">
-            <img src="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_75,s_3840x3840/https://cdn.tgdd.vn/Files/2022/10/04/1473920/thu-ngay-13-quan-an-toi-quan-long-bien-sieu-hut-khach-202210040049324857.jpg" alt="Miến Trộn Gà" loading="lazy">
+            <img src="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_75,s_3840x3840/https://cdn.tgdd.vn/Files/2022/10/04/1473920/thu-ngay-13-quan-an-toi-quan-long-bien-sieu-hut-khach-202210040049324857.jpg"
+                alt="Miến Trộn Gà" loading="lazy">
             <div class="place-content">
                 <h3>Miến Trộn Gà Thắng Xoăn</h3>
                 <p>Địa chỉ: 158 Ngọc Lâm, Long Biên, Hà Nội</p>
                 <p class="rating">🌟 4.4/5</p>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.6654008068167!2d105.86799547503186!3d21.04607008060752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135abd6a9affa53%3A0xd4b371f17242fb6b!2zUXXDoW4gZ8OgIFRo4bqvbmcgWG_Eg24!5e0!3m2!1svi!2s!4v1747839477570!5m2!1svi!2s" width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
         <div class="place" data-category="Xôi" data-area="Hoàn Kiếm">
-            <img src="https://truongdaihocvietnam.com/wp-content/uploads/2023/10/xoi-yen3.jpg" alt="Xôi Yến" loading="lazy">
+            <img src="https://truongdaihocvietnam.com/wp-content/uploads/2023/10/xoi-yen3.jpg" alt="Xôi Yến"
+                loading="lazy">
             <div class="place-content">
                 <h3>Xôi Yến</h3>
                 <p>Địa chỉ: 35B Nguyễn Hữu Huân, Lý Thái Tổ, Hoàn Kiếm, Hà Nội</p>
                 <p class="rating">🌟 4.1/5</p>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29791.791180652996!2d105.81641117431639!3d21.033730399999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135abf54e9751af%3A0x9720e5f2f8f19320!2zWMO0aSBZ4bq_bg!5e0!3m2!1svi!2s!4v1747839501833!5m2!1svi!2s" width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
         <div class="place" data-category="Bánh" data-area="Hoàng Mai">
-            <img src="https://static.vinwonders.com/production/banh-cuon-thanh-tri-1.jpg" alt="Bánh Cuốn Thanh Trì Cô Lan" loading="lazy">
+            <img src="https://static.vinwonders.com/production/banh-cuon-thanh-tri-1.jpg"
+                alt="Bánh Cuốn Thanh Trì Cô Lan" loading="lazy">
             <div class="place-content">
                 <h3>Bánh Cuốn Thanh Trì Cô Lan</h3>
                 <p>Địa chỉ: 30 Thanh Đàm, Thanh Trì, Hoàng Mai, Hà Nội</p>
                 <p class="rating">🌟 4.3/5</p>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.9855166434513!2d105.88818397503049!3d20.993217680647252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135aeb02208ce69%3A0x31dd9cf6246a67fa!2zQsOhbmggY3Xhu5FuIFRoYW5oIFRyw6wgQ8O0IExhbg!5e0!3m2!1svi!2s!4v1747839530481!5m2!1svi!2s" width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
         <div class="place" data-category="Ăn vặt" data-area="Cầu Giấy">
-            <img src="https://langcomvong.com/uploads/images/com-lang-vong.jpg" alt="Cốm Làng Vòng Bà Hoản" loading="lazy">
+            <img src="https://langcomvong.com/uploads/images/com-lang-vong.jpg" alt="Cốm Làng Vòng Bà Hoản"
+                loading="lazy">
             <div class="place-content">
                 <h3>Cốm Làng Vòng Bà Hoản</h3>
                 <p>Địa chỉ: 36 Ngõ 63, Xuân Thủy, Dịch Vọng Hậu, Cầu Giấy, Hà Nội</p>
                 <p class="rating">🌟 4.8/5</p>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.9225092650563!2d105.78548137503168!3d21.03578638061525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135abbf2d6c67e7%3A0xaa8931acb2a413f9!2zQ-G7kW0gTMOgbmcgVsOybmcgQsOgIEhv4bqjbg!5e0!3m2!1svi!2s!4v1747839561704!5m2!1svi!2s" width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
         <div class="place" data-category="Bún" data-area="Hoàn Kiếm">
-            <img src="https://static.vinwonders.com/2023/01/bun-dau-mam-tom-01.jpg" alt="Bún đậu mắm tôm Hàng Khay" loading="lazy">
+            <img src="https://static.vinwonders.com/2023/01/bun-dau-mam-tom-01.jpg" alt="Bún đậu mắm tôm Hàng Khay"
+                loading="lazy">
             <div class="place-content">
                 <h3>Bún Đậu Mắm Tôm Hàng Khay</h3>
                 <p>Địa chỉ: cuối ngõ 29 Hàng Khay, Hoàn Kiếm, Hà Nội</p>
                 <p class="rating">🌟 4.3/5</p>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d658.3498369381787!2d105.85199308813638!3d21.025119433710373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab002362d55d%3A0x6127e8286e53a96b!2zQsO6biDEkOG6rXUgY8O0IFR1eeG6v24!5e0!3m2!1svi!2s!4v1747839616402!5m2!1svi!2s" width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
         <div class="place" data-category="Ăn vặt" data-area="Hoàn Kiếm">
@@ -246,63 +246,110 @@
                 <h3>Kem Tràng Tiền</h3>
                 <p>Địa chỉ: 35 Tràng Tiền, Hoàn Kiếm, Hà Nội</p>
                 <p class="rating">🌟 4.4/5</p>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8857.847160227791!2d105.85544601934963!3d21.02204163345275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135abeb7c5cbdad%3A0xedad730043bd6280!2zS2VtIFRyw6BuZyBUaeG7gW4!5e0!3m2!1svi!2s!4v1747830229659!5m2!1svi!2s" width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
         <div class="place" data-category="Đồ uống" data-area="Thanh Xuân">
-            <img src="https://dayconkieunhat.vn/wp-content/uploads/2019/10/bia-hoi-corner-1.jpg" alt="Bia Hơi Hải Xồm" loading="lazy">
+            <img src="https://dayconkieunhat.vn/wp-content/uploads/2019/10/bia-hoi-corner-1.jpg" alt="Bia Hơi Hải Xồm"
+                loading="lazy">
             <div class="place-content">
                 <h3>Bia Hơi Hải Xồm</h3>
                 <p>Địa chỉ: 86B Lê Trọng Tấn, Thanh Xuân, Hà Nội</p>
                 <p class="rating">🌟 4.0/5</p>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14899.414133616188!2d105.80938918715817!3d20.998507500000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac87f8d9bd79%3A0x1cad4b2317711571!2zTmjDoCBIw6BuZyBCaWEgSMahaSBI4bqjaSBY4buTbQ!5e0!3m2!1svi!2s!4v1747839674153!5m2!1svi!2s" width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
         <div class="place" data-category="Ăn vặt" data-area="Hoàn Kiếm">
-            <img src="https://toplist.vn/images/800px/nem-chua-ran-36-tam-thuong-813824.jpg" alt="Nem chua rén 36" loading="lazy">
+            <img src="https://toplist.vn/images/800px/nem-chua-ran-36-tam-thuong-813824.jpg" alt="Nem chua rén 36"
+                loading="lazy">
             <div class="place-content">
                 <h3>Nem Chua Rán 36</h3>
                 <p>Địa chỉ: 36 Ngõ Tạm Thương, Hoàn Kiếm, Hà Nội</p>
                 <p class="rating">🌟 4.2/5</p>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.03292178426!2d105.84513377503156!3d21.03136868061859!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135abbe1fcbc1dd%3A0x123f6ee5a398065d!2zQ-G7rWEgSMOgbmcgTmVtIENodWEgUsOhbiAtIDM2IFThuqFtIFRoxrDGoW5n!5e0!3m2!1svi!2s!4v1747839704650!5m2!1svi!2s" width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
         <div class="place" data-category="Đồ uống" data-area="Hoàn Kiếm">
-            <img src="https://lyoncoffee.com.vn/wp-content/uploads/cafe-giang-ha-noi-3.jpg" alt="Café Giảng" loading="lazy">
+            <img src="https://lyoncoffee.com.vn/wp-content/uploads/cafe-giang-ha-noi-3.jpg" alt="Café Giảng"
+                loading="lazy">
             <div class="place-content">
                 <h3>Café Giảng</h3>
                 <p>Địa chỉ: 39 Nguyễn Hữu Huân, Hoàn Kiếm, Hà Nội</p>
                 <p class="rating">🌟 4.4/5</p>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.980497529777!2d105.84964707922578!3d21.03346633063935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135abc0ee85335d%3A0xfca3408ac50e7363!2zQ2FmZSBHaeG6o25n!5e0!3m2!1svi!2s!4v1747839728247!5m2!1svi!2s" width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
     </section>
 
-    <section id="contact">
-        <h2>Liên Hệ Với Bản Đồ Ăn</h2>
-        <p>Chúng tôi rất mong nhận được ý kiến, đề xuất hoặc câu hỏi của bạn. Hãy để lại thông tin để cùng khám phá ẩm thực Hà Nội!</p>
-        <form class="contact-form">
-            <input type="text" id="name" name="name" placeholder="Họ và Tên" required>
-            <input type="email" id="email" name="email" placeholder="Email" required>
-            <input type="text" id="subject" name="subject" placeholder="Chủ đề" required>
-            <textarea id="message" name="message" placeholder="Nội dung tin nhắn" required></textarea>
-            <button>Gửi Tin Nhắn</button>
-        </form>
-        <div class="contact-info">
-            <p>Email: <a href="mailto:TuyenVS.ptit@gmail.com">TuyenVS.ptit@gmail.com</a></p>
-            <p>Điện thoại: <a href="tel:+84975035895">+84 975 035 895</a></p>
-            <p>Địa chỉ: số 19, ngách 73/9, Đường Yên Xá, Tân Triều, Thanh Trì, Hà Nội</p>
+    <section id="books">
+        <h2>Sách</h2>
+        <p>Khám phá các cuốn sách ẩm thực và văn hóa của chúng tôi - 'Miếng Ngon Hà Nội'.</p>
+        <a href="./book/book.html" target="_blank" rel="noopener noreferrer">Đọc thêm về Miếng Ngon Hà Nội</a>
+    </section>
+
+    <section id="partners">
+        <h2>Các Thương Hiệu Hợp Tác Năm 2024</h2>
+        <p>Cảm ơn các thương hiệu đã đồng hành cùng Bản Đồ Ăn trong hành trình khám phá ẩm thực Việt Nam! Đây là danh sách các đối tác đã hỗ trợ chúng tôi trong năm 2024.</p>
+        <div class="partner-grid">
+            <div class="partner-logo"><img src="https://i.pinimg.com/736x/cc/8d/3e/cc8d3e6da9164d4db862240bcc72313a.jpg" alt="Ajinomoto"></div>
+            <div class="partner-logo"><img src="https://i.pinimg.com/736x/5f/68/7f/5f687fc507525ca22a8f371d49c3be1d.jpg" alt="Maggi"></div>
+            <div class="partner-logo"><img src="https://i.pinimg.com/736x/e9/b6/a0/e9b6a0046cadbdde5e137b4e70570ae3.jpg" alt="Cook Happy Acecook"></div>
+            <div class="partner-logo"><img src="https://i.pinimg.com/736x/e8/fe/72/e8fe723cbff8b416ca7dd17e3cb20d45.jpg" alt="Jollibee"></div>
+            <div class="partner-logo"><img src="https://i.pinimg.com/736x/c1/e6/72/c1e6728b1ee1caea0adfdcd1b9363376.jpg" alt="Starbucks"></div>
+            <div class="partner-logo"><img src="https://i.pinimg.com/736x/2d/9c/68/2d9c68debd3747f143076d48715938c6.jpg" alt="Samyang"></div>
+            <div class="partner-logo"><img src="https://i.pinimg.com/736x/1d/10/ac/1d10ace1366d2bfc4a784014935e6c93.jpg" alt="Oishi"></div>
+            <div class="partner-logo"><img src="https://i.pinimg.com/736x/5b/ee/af/5beeaf38b37d455893672ec54548af03.jpg" alt="Kitkat"></div>
+            <div class="partner-logo"><img src="https://i.pinimg.com/736x/b9/d0/92/b9d092a5e0568b144962cd5032d8afe0.jpg" alt="Sabeco"></div>
+            <div class="partner-logo"><img src="https://i.pinimg.com/736x/fb/c3/85/fbc38574dab4c56769f840970980a9e1.jpg" alt="Coca-Cola"></div>
+            <div class="partner-logo"><img src="https://i.pinimg.com/736x/89/5c/cb/895ccbb82bb5eed4dfdb4d112554c874.jpg" alt="Heineken"></div>
+            <div class="partner-logo"><img src="https://i.pinimg.com/736x/1a/b1/01/1ab1018caadab50b23b4317d01a59cf4.jpg" alt="Vinamilk"></div>
+            <div class="partner-logo"><img src="https://i.pinimg.com/736x/47/bd/84/47bd840e699999a572dc1d859854309d.jpg" alt="Nestea"></div>
+            <div class="partner-logo"><img src="https://i.pinimg.com/736x/8f/b1/c9/8fb1c97de285b51823710662fe8529ee.jpg" alt="Lipton"></div>
+            <div class="partner-logo"><img src="https://i.pinimg.com/736x/30/5d/61/305d61bef57564cb3f667dc08566c152.jpg" alt="Walls"></div>
+            <div class="partner-logo"><img src="https://i.pinimg.com/736x/8c/bf/a8/8cbfa8b08311fccc62a5558f4cc86ffe.jpg" alt="Grab"></div>
+            <div class="partner-logo"><img src="https://i.pinimg.com/736x/96/a3/41/96a34154d19d4865708ff80e3ea15c64.jpg" alt="Shopee"></div>
+            <div class="partner-logo"><img src="https://i.pinimg.com/736x/7d/4c/3d/7d4c3dd210c2234f6a9bfb2326572ad6.jpg" alt="Lays"></div>
+            <div class="partner-logo"><img src="https://i.pinimg.com/736x/85/a2/bd/85a2bdb05c9c51b9e51cec05826caa69.jpg" alt="KFC"></div>
+            <div class="partner-logo"><img src="https://i.pinimg.com/736x/6e/bc/78/6ebc781978c8e0757de9273070302fa2.jpg" alt="Knorr"></div>
         </div>
     </section>
 
     <footer>
-        <p>© 2025 Bản Đồ Ăn - Ăn Là Phải Ngon!</p>
-        <div class="social-links">
-            <a href="https://www.facebook.com/tuyentuoivui2k6"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://www.instagram.com/vstuynz_502/"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://www.youtube.com/@tuyenvuongsy6950"><i class="fa-brands fa-youtube"></i></a>
-            <a href="https://www.tiktok.com/@vuongtuyen502"><i class="fa-brands fa-tiktok"></i></a>
+        <div class="footer-container">
+            <div class="footer-left">
+                <div class="logo-title">
+                    <img src="anhLogo.png" alt="logo" class="footer-logo">
+                    <h2 class="footer-title">BẢN ĐỒ ĂN</h2>
+                </div>
+                <div class="contact-info">
+                    <p>Email: <a href="mailto:tuyenvs.ptit@gmail.com">tuyenvs.ptit@gmail.com</a></p>
+                    <p>Hotline: <a href="tel:+84975035895">0975035895</a></p>
+                    <p>Địa chỉ: số 19, ngách 73/19 đường Yên<br> Xá, phường Tân Triều, huyện Thanh<br> Trì, Hà Nội</p>
+                </div>
+            </div>
+            <div class="footer-center">
+                <ul>
+                    <li><a href="project.html">Home</a></li>
+                    <li><a href="./blog/blog.html">Blog</a></li>
+                    <li><a href="./food map/bandoan.html">Danh sách quán</a></li>
+                    <li><a href="./book/book.html">Sách</a></li>
+                    <li><a href="./contact/contact.html">Liên hệ</a></li>
+                </ul>
+            </div>
+            <div class="footer-right">
+                <div class="fb-widget">
+                    <iframe
+                        src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ftuyentuoivui2k6&tabs&width=300&height=130&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+                        width="300" height="130" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                        allowfullscreen="true"
+                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="footer-social">
+            <a href="https://www.facebook.com/tuyentuoivui2k6" target="_blank" rel="noopener"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/vstuynz_502/" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@vuongtuyen502" target="_blank" rel="noopener"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://www.youtube.com/@tuyenvuongsy6950" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i></a>
+            <a href="mailto:tuyenvs.ptit@gmail.com" aria-label="Send us an email"><i class="fas fa-envelope"></i></a>
         </div>
     </footer>
 </body>
+
 </html>

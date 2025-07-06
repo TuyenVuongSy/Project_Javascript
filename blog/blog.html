@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="bản đồ ăn, ẩm thực Hà Nội, tổng hợp blog, Tuyến Vương">
+    <meta name="author" content="Tuyến Vương">
+    <title>Tổng Hợp Blog | Bản Đồ Ăn</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="blog.css">
+    <meta property="og:title" content="Tổng Hợp Blog | Bản Đồ Ăn">
+    <meta property="og:description" content="Khám phá tổng hợp các bài blog về ẩm thực và văn hóa Hà Nội, từ phở đến sách ẩm thực nổi tiếng.">
+    <meta property="og:image" content="https://yourdomain.com/anhLogo.png">
+    <meta property="og:url" content="https://yourdomain.com/blog/tonghopblog.html">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div class="header-logo">
+                <img src="../anhLogo.png" alt="Bản Đồ Ăn Logo - Food Map by Tuyến Vương">
+                <h1>Bản Đồ Ăn</h1>
+                <p>Khám phá quán ngon quanh bạn cùng Tuyến nhé!</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../project.html">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="../food map/bandoan.html">Danh Sách Quán</a></li>
+                    <li><a href="../book/book.html">Sách</a></li>
+                    <li><a href="../contact/contact.html">Liên Hệ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="blog-content">
+        <article class="main-story">
+            <h2>Tổng Hợp Blog</h2>
+            <p>Chào mừng bạn đến với trang tổng hợp các bài blog của Bản Đồ Ăn! Tại đây, chúng ta cùng khám phá hành trình ẩm thực và văn hóa Hà Nội qua các món ăn, đồ uống, và sách nổi bật. Dưới đây là danh sách các bài viết:</p>
+            <div class="blog-list" id="blogList">
+                <div class="blog-item"><a href="pho.html" target="_blank" rel="noopener noreferrer">Phở - Hồn Cốt Hà Nội</a>: Câu chuyện về phở và quán ngon.</div>
+                <div class="blog-item"><a href="buncha.html" target="_blank" rel="noopener noreferrer">Bún Chả - Hương Vị Phố Cổ</a>: Hành trình của bún chả và nước chấm.</div>
+                <div class="blog-item"><a href="chaca.html" target="_blank" rel="noopener noreferrer">Chả Cá - Tinh Hoa Láng Hạ</a>: Món chả cá cầu kỳ và địa chỉ nổi tiếng.</div>
+                <div class="blog-item"><a href="com.html" target="_blank" rel="noopener noreferrer">Cốm - Hương Thu Hà Nội</a>: Hạt ngọc xanh từ làng Vòng.</div>
+                <div class="blog-item"><a href="banhmi.html" target="_blank" rel="noopener noreferrer">Bánh Mì - Di Sản Phố Hội</a>: Giao thoa Pháp-Việt trong bánh mì.</div>
+                <div class="blog-item"><a href="doanvat.html" target="_blank" rel="noopener noreferrer">Đồ Ăn Vặt - Vị Ngon Phố Phường</a>: Nem chua rán và ô mai đường phố.</div>
+                <div class="blog-item"><a href="kem.html" target="_blank" rel="noopener noreferrer">Kem - Mát Lành Ngày Hè</a>: Ký ức với kem Tràng Tiền.</div>
+            </div>
+
+            <div class="pagination">
+                <button id="prevBtn" onclick="prevPage()">Trước</button>
+                <span id="pageInfo">Trang 1 của 2</span>
+                <button id="nextBtn" onclick="nextPage()">Sau</button>
+            </div>
+        </article>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <div class="logo-title">
+                    <img src="../anhLogo.png" alt="Bản Đồ Ăn Logo" class="footer-logo">
+                    <h2 class="footer-title">BẢN ĐỒ ĂN</h2>
+                </div>
+                <div class="contact-info">
+                    <p>Email: <a href="mailto:tuyenvs.ptit@gmail.com">tuyenvs.ptit@gmail.com</a></p>
+                    <p>Hotline: <a href="tel:+84975035895">09750335895</a></p>
+                    <p>Địa chỉ: số 19, ngách 73/19 đường Yên<br>Xá, phường Tân Triều, huyện Thanh<br>Trì, Hà Nội</p>
+                </div>
+            </div>
+            <div class="footer-center">
+                <ul>
+                    <li><a href="../project.html">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="../food map/bandoan.html">Danh sách quán</a></li>
+                    <li><a href="../book/book.html">Sách</a></li>
+                    <li><a href="../contact/contact.html">Liên hệ</a></li>
+                    
+                </ul>
+            </div>
+            <div class="footer-right">
+                <div class="fb-widget">
+                    <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ftuyentuoivui2k6&tabs&width=300&height=130&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="300" height="130" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="footer-social">
+            <a href="https://www.facebook.com/tuyentuoivui2k6" target="_blank" rel="noopener"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/vstuynz_502/" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@vuongtuyen502" target="_blank" rel="noopener"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://www.youtube.com/@tuyenvuongsy6950" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i></a>
+            <a href="mailto:tuyenvs.ptit@gmail.com" aria-label="Send us an email"><i class="fas fa-envelope"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        let currentPage = 1;
+        const itemsPerPage = 6;
+        const blogItems = document.querySelectorAll('.blog-item');
+        const totalPages = Math.ceil(blogItems.length / itemsPerPage);
+        const pageInfo = document.getElementById('pageInfo');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+
+        function showPage(page) {
+            const start = (page - 1) * itemsPerPage;
+            const end = start + itemsPerPage;
+            blogItems.forEach((item, index) => {
+                item.style.display = (index >= start && index < end) ? 'block' : 'none';
+            });
+            pageInfo.textContent = `Trang ${page} của ${totalPages}`;
+            prevBtn.disabled = page === 1;
+            nextBtn.disabled = page === totalPages;
+        }
+
+        function prevPage() {
+            if (currentPage > 1) {
+                currentPage--;
+                showPage(currentPage);
+            }
+        }
+
+        function nextPage() {
+            if (currentPage < totalPages) {
+                currentPage++;
+                showPage(currentPage);
+            }
+        }
+
+        // Initial load
+        showPage(currentPage);
+    </script>
+</body>
+
+</html>
