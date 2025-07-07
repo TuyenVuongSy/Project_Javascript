@@ -21,7 +21,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .header-container {
@@ -58,7 +58,7 @@ header {
 }
 
 nav {
-    background: rgba(0,0,0,0.1);
+    background: rgba(0, 0, 0, 0.1);
     padding: 1rem;
 }
 
@@ -80,21 +80,98 @@ nav ul li a:hover {
     color: #ffebee;
 }
 
-
-/* Filters */
-.filters {
-    text-align: center;
-    padding: 1rem;
-    background: rgba(255,255,255,0.9);
+/* Map Content */
+.map-content {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #FB9E3A;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: #fff;
 }
 
+.map-content h2 {
+    font-size: 2.5rem;
+    color: #e64a19;
+    margin-bottom: 1rem;
+}
+
+.map-content p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+}
+
+/* Map Controls and Filters */
+.map-controls,
+.filters {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.map-controls select,
+.map-controls input,
 .filters select {
     padding: 0.5rem;
-    border-radius: 5px;
     border: 1px solid #ddd;
-    margin: 0 0.5rem;
+    border-radius: 5px;
+    font-size: 1rem;
 }
 
+.map-controls button {
+    padding: 0.5rem 1rem;
+    background-color: #e64a19;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.map-controls button:hover {
+    background-color: #ff7043;
+}
+
+/* Map */
+#map {
+    height: 400px;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+/* Map Locations */
+.map-locations {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 5px;
+    color: #555;
+}
+
+.map-locations h3 {
+    font-size: 1.8rem;
+    color: #e64a19;
+    margin-bottom: 1rem;
+}
+
+.map-locations ul {
+    list-style: none;
+}
+
+.map-locations ul li {
+    margin-bottom: 0.5rem;
+}
+
+.map-locations ul li a {
+    color: #e64a19;
+    text-decoration: none;
+}
+
+.map-locations ul li a:hover {
+    color: #ff7043;
+}
 
 /* List */
 #list {
@@ -118,10 +195,12 @@ nav ul li a:hover {
 }
 
 .place {
-    background: rgba(255,255,255,0.9);
-    padding: 1rem;
+    background: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    color: #555;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
     display: flex;
     flex-direction: column;
@@ -144,26 +223,84 @@ nav ul li a:hover {
 
 .place-content {
     flex: 1;
+    padding: 1rem 0;
 }
 
-.place h3 {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
+.place-content h3 {
+    font-size: 1.5rem;
+    color: #e64a19;
+    margin: 0.5rem 0;
 }
 
-.place p {
+.place-content p {
     font-size: 1rem;
     color: #555;
+    margin: 0.3rem 0;
 }
 
-.place .rating {
-    color: #f39c12;
+.rating {
+    color: #ffca28;
     margin-top: 0.5rem;
     font-size: 0.9rem;
 }
 
+/* FAQ Section */
+.faq-section {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #1a1a1a;
+    color: #fff;
+    border-radius: 10px;
+}
 
+.faq-section h2 {
+    font-size: 2.5rem;
+    color: #ff6200;
+    border-bottom: 2px solid #ff6200;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
 
+.faq-item {
+    border-bottom: 1px solid #333;
+    margin-bottom: 1rem;
+}
+
+.faq-question {
+    font-size: 1.2rem;
+    padding: 1rem;
+    cursor: pointer;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-question:hover {
+    color: #ff6200;
+}
+
+.faq-answer {
+    padding: 0 1rem 1rem 1rem;
+    display: none;
+    color: #ccc;
+}
+
+.faq-answer.active {
+    display: block;
+}
+
+.faq-toggle {
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.faq-toggle.rotated {
+    transform: rotate(180deg);
+}
+
+/* Footer */
 footer {
     background: #000;
     color: white;
@@ -221,7 +358,6 @@ footer {
 
 .footer-center ul {
     list-style: none;
-    padding: 0;
 }
 
 .footer-center ul li {
@@ -233,15 +369,10 @@ footer {
     text-decoration: underline;
     font-weight: bold;
     transition: color 0.3s;
-    
 }
 
 .footer-center ul li a:hover {
     color: #ffebee;
-}
-
-.footer-right .fb-widget {
-    margin-top: 1rem;
 }
 
 .footer-right .fb-widget iframe {
@@ -274,213 +405,17 @@ footer {
         flex-direction: column;
         text-align: center;
     }
+
     .footer-left {
         flex-direction: column;
         align-items: center;
     }
+
     .footer-right .fb-widget iframe {
         width: 100%;
         height: 200px;
     }
-}
 
-.map-content {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 2rem;
-    background: #FB9E3A;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    color: #fff;
-}
-
-.map-content h2 {
-    font-size: 2.5rem;
-    color: #e64a19;
-    margin-bottom: 1rem;
-}
-
-.map-content p {
-    font-size: 1.1rem;
-    margin-bottom: 1.5rem;
-    line-height: 1.7;
-}
-
-.map-controls {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 2rem;
-    flex-wrap: wrap;
-}
-
-.map-controls select, .map-controls input {
-    padding: 0.5rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 1rem;
-}
-
-.map-controls button {
-    padding: 0.5rem 1rem;
-    background-color: #e64a19;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.map-controls button:hover {
-    background-color: #ff7043;
-}
-
-.filters {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 2rem;
-}
-
-.filters select {
-    padding: 0.5rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 1rem;
-}
-
-#map {
-    height: 400px;
-    width: 100%;
-    margin-bottom: 2rem;
-}
-
-.map-locations {
-    background: #fff;
-    padding: 1rem;
-    border-radius: 5px;
-    color: #555;
-}
-
-.map-locations h3 {
-    font-size: 1.8rem;
-    color: #e64a19;
-    margin-bottom: 1rem;
-}
-
-.map-locations ul {
-    list-style: none;
-    padding: 0;
-}
-
-.map-locations ul li {
-    margin-bottom: 0.5rem;
-}
-
-.map-locations ul li a {
-    color: #e64a19;
-    text-decoration: none;
-}
-
-.map-locations ul li a:hover {
-    color: #ff7043;
-}
-
-#list {
-    margin-top: 2rem;
-}
-
-.place {
-    background: #fff;
-    border-radius: 5px;
-    margin-bottom: 1.5rem;
-    padding: 1rem;
-    color: #555;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.place img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-}
-
-.place-content {
-    padding: 1rem 0;
-}
-
-.place-content h3 {
-    font-size: 1.5rem;
-    color: #e64a19;
-    margin: 0.5rem 0;
-}
-
-.place-content p {
-    margin: 0.3rem 0;
-}
-
-.rating {
-    color: #ffca28;
-}
-
-iframe {
-    border: 0;
-}
-
-.faq-section {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 2rem;
-    background: #1a1a1a;
-    color: #fff;
-    border-radius: 10px;
-}
-
-.faq-section h2 {
-    font-size: 2.5rem;
-    color: #ff6200;
-    border-bottom: 2px solid #ff6200;
-    padding-bottom: 0.5rem;
-    margin-bottom: 1.5rem;
-}
-
-.faq-item {
-    border-bottom: 1px solid #333;
-    margin-bottom: 1rem;
-}
-
-.faq-question {
-    font-size: 1.2rem;
-    padding: 1rem;
-    cursor: pointer;
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.faq-question:hover {
-    color: #ff6200;
-}
-
-.faq-answer {
-    padding: 0 1rem 1rem 1rem;
-    display: none;
-    color: #ccc;
-}
-
-.faq-answer.active {
-    display: block;
-}
-
-.faq-toggle {
-    font-size: 1.2rem;
-    transition: transform 0.3s ease;
-}
-
-.faq-toggle.rotated {
-    transform: rotate(180deg);
-}
-
-@media (max-width: 768px) {
     .map-content {
         padding: 1.5rem;
     }
@@ -493,11 +428,14 @@ iframe {
         font-size: 1rem;
     }
 
-    .map-controls, .filters {
+    .map-controls,
+    .filters {
         flex-direction: column;
     }
 
-    .map-controls select, .map-controls input, .filters select {
+    .map-controls select,
+    .map-controls input,
+    .filters select {
         width: 100%;
     }
 

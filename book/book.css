@@ -21,7 +21,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .header-container {
@@ -58,7 +58,7 @@ header {
 }
 
 nav {
-    background: rgba(0,0,0,0.1);
+    background: rgba(0, 0, 0, 0.1);
     padding: 1rem;
 }
 
@@ -149,7 +149,7 @@ footer {
     text-decoration: underline;
     font-weight: bold;
     transition: color 0.3s;
-    
+
 }
 
 .footer-center ul li a:hover {
@@ -188,7 +188,8 @@ footer {
     max-width: 1200px;
     margin: 2rem auto;
     padding: 2rem;
-    position: relative; /* For overlay effect */
+    position: relative;
+    /* For overlay effect */
 }
 
 .blog-content::before {
@@ -198,13 +199,17 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1; /* Places overlay behind content */
+    z-index: 1;
+    /* Places overlay behind content */
 }
 
 .main-story {
-    position: relative; /* Ensures content stays above overlay */
-    z-index: 2; /* Places content above the overlay */
-    background: rgba(255, 255, 255, 0.9); /* Slight background for readability */
+    position: relative;
+    /* Ensures content stays above overlay */
+    z-index: 2;
+    /* Places content above the overlay */
+    background: rgba(255, 255, 255, 0.9);
+    /* Slight background for readability */
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -289,10 +294,12 @@ footer {
         flex-direction: column;
         text-align: center;
     }
+
     .footer-left {
         flex-direction: column;
         align-items: center;
     }
+
     .footer-right .fb-widget iframe {
         width: 100%;
         height: 200px;

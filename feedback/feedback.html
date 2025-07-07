@@ -1,312 +1,267 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="đánh giá quán ăn, bản đồ ăn, Tuyến Vương, ẩm thực Hà Nội">
-    <meta name="author" content="Tuyến Vương">
-    <title>Đánh Giá Quán Ăn | Bản Đồ Ăn</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="">
-    <meta property="og:title" content="Đánh Giá Quán Ăn | Bản Đồ Ăn">
-    <meta property="og:description" content="Gửi phản hồi về trải nghiệm của bạn tại các quán ăn trên Bản Đồ Ăn.">
-    <meta property="og:image" content="https://bandoan.vn/images/anhLogo.png">
-    <meta property="og:url" content="https://bandoan.vn/feedback/feedback.html">
+    <title>Phản hồi chất lượng | Bản Đồ Ăn</title>
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #FB9E3A;
-            color: #fff;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-        main {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 2rem;
-        }
-        .background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('../images/background.jpg');
-            background-size: cover;
-            opacity: 0.1;
-            z-index: 0;
-        }
-        .container {
-            position: relative;
-            z-index: 1;
-            background: rgba(255, 255, 255, 0.95);
-            padding: 20px;
-            border-radius: 12px;
-            max-width: 600px;
-            width: 100%;
-            text-align: center;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-        }
-        h2 {
-            color: #EA2F14;
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-        }
-        .section {
-            margin: 1rem 0;
+        :root {
+            --primary-color: #EA2F14;
+            --secondary-color: #FB9E3A;
         }
 
-        .section h3 {
-            color: #EA2F14;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        .rating {
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--secondary-color);
+            color: #333;
+            line-height: 1.6;
             display: flex;
-            justify-content: center;
-            gap: 5px;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
         }
-        .rating input[type="radio"] {
+
+        header {
+            background-color: var(--primary-color);
+            color: #fff;
+            width: 100%;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        main {
+            max-width: 800px;
+            width: 90%;
+            padding: 2rem;
+            background-color: #fff;
+            border-radius: 10px;
+            margin: 2rem auto;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .section {
+            margin-bottom: 1.5rem;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .star-rating {
+            display: flex;
+            gap: 0.5rem;
+            flex-direction: row-reverse;
+            justify-content: flex-end;
+        }
+
+        .star-rating input {
             display: none;
         }
-        .rating label {
-            color: #333;
-            padding: 5px 10px;
+
+        .star-rating label {
+            font-size: 2rem;
+            color: #ccc;
             cursor: pointer;
-            font-size: 1.2rem;
-            transition: color 0.3s;
+            transition: color 0.2s;
         }
-        .rating input[type="radio"]:checked + label {
-            color: #EA2F14;
-            font-weight: bold;
+
+        .star-rating input:checked~label,
+        .star-rating label:hover,
+        .star-rating label:hover~label {
+            color: #ffca28;
         }
-        select, textarea {
+
+        textarea {
             width: 100%;
-            padding: 10px;
-            margin: 5px 0;
+            height: 100px;
+            padding: 0.5rem;
             border: 1px solid #ccc;
             border-radius: 5px;
-            box-sizing: border-box;
-            font-size: 1rem;
+            resize: vertical;
         }
-        textarea {
-            height: 80px;
-            resize: none;
-        }
-        .char-count {
-            font-size: 0.9rem;
-            color: #555;
-            text-align: right;
-        }
-        .buttons {
-            display: flex;
-            justify-content: space-between;
-            gap: 10px;
-            margin-top: 1.5rem;
-        }
+
         button {
-            flex: 1;
-            padding: 10px;
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 0.75rem 1.5rem;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            font-size: 1rem;
             transition: background-color 0.3s;
         }
-        #previousBtn {
-            background-color: #FB9E3A;
-            color: #fff;
+
+        button:hover {
+            background-color: #ff7043;
         }
-        #submitBtn {
-            background-color: #EA2F14;
-            color: #fff;
-        }
-        #submitBtn:disabled {
+
+        button:disabled {
             background-color: #ccc;
             cursor: not-allowed;
         }
-        #submitBtn:hover:not(:disabled) {
-            background-color: #E6521F;
-        }
+
         .error {
-            color: #EA2F14;
+            color: red;
             font-size: 0.9rem;
-            margin-top: 10px;
+            margin-top: 0.5rem;
             display: none;
         }
-        button:focus, select:focus, textarea:focus, .rating label:focus {
-            outline: 2px solid #EA2F14;
-            outline-offset: 2px;
-        }
-        @media (max-width: 450px) {
-            .container {
-                padding: 15px;
+
+        @media (max-width: 600px) {
+            main {
+                width: 95%;
+                padding: 1rem;
             }
-            .buttons {
-                flex-direction: column;
-                gap: 10px;
+
+            .star-rating label {
+                font-size: 1.5rem;
             }
         }
     </style>
 </head>
+
 <body>
-
+    <header>
+        <h1>Phản hồi chất lượng - <span id="restaurantName"></span></h1>
+    </header>
     <main>
-        <div class="background"></div>
-        <div class="container">
-            <h2>Đánh Giá: <span id="restaurantName">Quán Ăn</span></h2>
-            <p>Vui lòng cung cấp phản hồi chi tiết về trải nghiệm của bạn.</p>
-            <form id="reviewForm">
-                <input type="hidden" name="restaurant" id="restaurantInput">
-                <div class="section">
-                    <h3>1. Đánh giá tổng thể*</h3>
-                    <div class="rating" aria-label="Đánh giá tổng thể">
-                        <input type="radio" id="overall5" name="overall" value="5" required><label for="overall5">5 ★</label>
-                        <input type="radio" id="overall4" name="overall" value="4"><label for="overall4">4 ★</label>
-                        <input type="radio" id="overall3" name="overall" value="3"><label for="overall3">3 ★</label>
-                        <input type="radio" id="overall2" name="overall" value="2"><label for="overall2">2 ★</label>
-                        <input type="radio" id="overall1" name="overall" value="1"><label for="overall1">1 ★</label>
-                    </div>
+        <p style="color: #EA2F14; text-align: center;">Chia sẻ trải nghiệm của bạn để giúp cộng đồng tìm được quán ngon
+            hơn!</p>
+        <form id="reviewForm"
+            action="https://docs.google.com/forms/d/e/1FAIpQLSdh6Jf2gexxW8az-KGKkfk-Ue-Hivkr8UJ2-jt4PfBYI2NgCA/formResponse"
+            method="POST">
+            <input type="hidden" name="entry.1045465519" id="restaurantInput">
+            <div class="section">
+                <h2>Đánh giá tổng thể</h2>
+                <div class="star-rating" role="radiogroup" aria-label="Đánh giá tổng thể">
+                    <input type="radio" name="entry.1445017922" value="5" id="overall5" required>
+                    <label for="overall5" title="5 sao">★</label>
+                    <input type="radio" name="entry.1445017922" value="4" id="overall4">
+                    <label for="overall4" title="4 sao">★</label>
+                    <input type="radio" name="entry.1445017922" value="3" id="overall3">
+                    <label for="overall3" title="3 sao">★</label>
+                    <input type="radio" name="entry.1445017922" value="2" id="overall2">
+                    <label for="overall2" title="2 sao">★</label>
+                    <input type="radio" name="entry.1445017922" value="1" id="overall1">
+                    <label for="overall1" title="1 sao">★</label>
                 </div>
-
-                <div class="section">
-                    <h3>2. Chất lượng món ăn*</h3>
-                    <div class="rating" aria-label="Chất lượng món ăn">
-                        <input type="radio" id="food5" name="food" value="5" required><label for="food5">5 ★</label>
-                        <input type="radio" id="food4" name="food" value="4"><label for="food4">4 ★</label>
-                        <input type="radio" id="food3" name="food" value="3"><label for="food3">3 ★</label>
-                        <input type="radio" id="food2" name="food" value="2"><label for="food2">2 ★</label>
-                        <input type="radio" id="food1" name="food" value="1"><label for="food1">1 ★</label>
-                    </div>
+            </div>
+            <div class="section">
+                <h2>Chất lượng món ăn</h2>
+                <div class="star-rating" role="radiogroup" aria-label="Chất lượng món ăn">
+                    <input type="radio" name="entry.227979620" value="5" id="food5" required>
+                    <label for="food5" title="5 sao">★</label>
+                    <input type="radio" name="entry.227979620" value="4" id="food4">
+                    <label for="food4" title="4 sao">★</label>
+                    <input type="radio" name="entry.227979620" value="3" id="food3">
+                    <label for="food3" title="3 sao">★</label>
+                    <input type="radio" name="entry.227979620" value="2" id="food2">
+                    <label for="food2" title="2 sao">★</label>
+                    <input type="radio" name="entry.227979620" value="1" id="food1">
+                    <label for="food1" title="1 sao">★</label>
                 </div>
-
-                <div class="section">
-                    <h3>3. Chất lượng phục vụ*</h3>
-                    <div class="rating" aria-label="Chất lượng phục vụ">
-                        <input type="radio" id="service5" name="service" value="5" required><label for="service5">5 ★</label>
-                        <input type="radio" id="service4" name="service" value="4"><label for="service4">4 ★</label>
-                        <input type="radio" id="service3" name="service" value="3"><label for="service3">3 ★</label>
-                        <input type="radio" id="service2" name="service" value="2"><label for="service2">2 ★</label>
-                        <input type="radio" id="service1" name="service" value="1"><label for="service1">1 ★</label>
-                    </div>
+            </div>
+            <div class="section">
+                <h2>Phục vụ</h2>
+                <div class="star-rating" role="radiogroup" aria-label="Phục vụ">
+                    <input type="radio" name="entry.1064781828" value="5" id="service5" required>
+                    <label for="service5" title="5 sao">★</label>
+                    <input type="radio" name="entry.1064781828" value="4" id="service4">
+                    <label for="service4" title="4 sao">★</label>
+                    <input type="radio" name="entry.1064781828" value="3" id="service3">
+                    <label for="service3" title="3 sao">★</label>
+                    <input type="radio" name="entry.1064781828" value="2" id="service2">
+                    <label for="service2" title="2 sao">★</label>
+                    <input type="radio" name="entry.1064781828" value="1" id="service1">
+                    <label for="service1" title="1 sao">★</label>
                 </div>
-
-                <div class="section">
-                    <h3>4. Vệ sinh*</h3>
-                    <div class="rating" aria-label="Vệ sinh">
-                        <input type="radio" id="clean5" name="clean" value="5" required><label for="clean5">5 ★</label>
-                        <input type="radio" id="clean4" name="clean" value="4"><label for="clean4">4 ★</label>
-                        <input type="radio" id="clean3" name="clean" value="3"><label for="clean3">3 ★</label>
-                        <input type="radio" id="clean2" name="clean" value="2"><label for="clean2">2 ★</label>
-                        <input type="radio" id="clean1" name="clean" value="1"><label for="clean1">1 ★</label>
-                    </div>
+            </div>
+            <div class="section">
+                <h2>Vệ sinh</h2>
+                <div class="star-rating" role="radiogroup" aria-label="Vệ sinh">
+                    <input type="radio" name="entry.2040576421" value="5" id="clean5" required>
+                    <label for="clean5" title="5 sao">★</label>
+                    <input type="radio" name="entry.2040576421" value="4" id="clean4">
+                    <label for="clean4" title="4 sao">★</label>
+                    <input type="radio" name="entry.2040576421" value="3" id="clean3">
+                    <label for="clean3" title="3 sao">★</label>
+                    <input type="radio" name="entry.2040576421" value="2" id="clean2">
+                    <label for="clean2" title="2 sao">★</label>
+                    <input type="radio" name="entry.2040576421" value="1" id="clean1">
+                    <label for="clean1" title="1 sao">★</label>
                 </div>
-
-                <div class="section">
-                    <h3>5. Giá trị tiền bạc*</h3>
-                    <select id="price" name="price" required>
-                        <option value="">Chọn mức độ hài lòng</option>
-                        <option value="5">Rất hài lòng</option>
-                        <option value="4">Hài lòng</option>
-                        <option value="3">Bình thường</option>
-                        <option value="2">Không hài lòng</option>
-                        <option value="1">Rất không hài lòng</option>
-                    </select>
+            </div>
+            <div class="section">
+                <h2>Giá trị tiền bạc</h2>
+                <div class="star-rating" role="radiogroup" aria-label="Giá trị tiền bạc">
+                    <input type="radio" name="entry.2055784231" value="5" id="price5" required>
+                    <label for="price5" title="5 sao">★</label>
+                    <input type="radio" name="entry.2055784231" value="4" id="price4">
+                    <label for="price4" title="4 sao">★</label>
+                    <input type="radio" name="entry.2055784231" value="3" id="price3">
+                    <label for="price3" title="3 sao">★</label>
+                    <input type="radio" name="entry.2055784231" value="2" id="price2">
+                    <label for="price2" title="2 sao">★</label>
+                    <input type="radio" name="entry.2055784231" value="1" id="price1">
+                    <label for="price1" title="1 sao">★</label>
                 </div>
-
-                <div class="section">
-                    <h3>6. Ý kiến bổ sung*</h3>
-                    <textarea id="comment" name="comment" placeholder="Nhập ý kiến của bạn (tối đa 500 ký tự)" maxlength="500" required></textarea>
-                    <p class="char-count"><span id="commentCount">0</span>/500 ký tự</p>
-                </div>
-
-                <div class="buttons">
-                    <button type="button" id="previousBtn">QUAY LẠI</button>
-                    <button type="submit" id="submitBtn" disabled>GỬI</button>
-                </div>
-                <div id="errorMessage" class="error"></div>
-            </form>
-        </div>
+            </div>
+            <div class="section">
+                <h2>Ý kiến bổ sung</h2>
+                <textarea name="entry.580171013" placeholder="Nhập ý kiến của bạn..."
+                    aria-label="Ý kiến bổ sung"></textarea>
+            </div>
+            <div class="section">
+                <button type="submit" id="submitBtn" disabled>Gửi đánh giá</button>
+                <div id="errorMessage" class="error">Vui lòng điền đầy đủ các trường bắt buộc!</div>
+            </div>
+        </form>
     </main>
-
     <script>
-        const restaurantName = document.getElementById('restaurantName');
+        const urlParams = new URLSearchParams(window.location.search);
+        const restaurantName = urlParams.get('restaurant') || 'Quán ăn';
+        document.getElementById('restaurantName').textContent = restaurantName;
+        document.getElementById('restaurantInput').value = restaurantName;
+
         const reviewForm = document.getElementById('reviewForm');
-        const restaurantInput = document.getElementById('restaurantInput');
         const submitBtn = document.getElementById('submitBtn');
-        const previousBtn = document.getElementById('previousBtn');
         const errorMessage = document.getElementById('errorMessage');
-        const commentInput = document.getElementById('comment');
-        const commentCount = document.getElementById('commentCount');
 
-        // Load restaurant name from query parameter
-        const params = new URLSearchParams(window.location.search);
-        const restaurant = decodeURIComponent(params.get('restaurant') || 'Quán Ăn');
-        restaurantName.textContent = restaurant;
-        restaurantInput.value = restaurant;
-
-        function validateForm() {
-            const overall = document.querySelector('input[name="overall"]:checked');
-            const food = document.querySelector('input[name="food"]:checked');
-            const service = document.querySelector('input[name="service"]:checked');
-            const clean = document.querySelector('input[name="clean"]:checked');
-            const price = document.getElementById('price').value;
-            const comment = commentInput.value.trim();
-
-            const isValid = overall && food && service && clean && price && comment;
-            submitBtn.disabled = !isValid;
-            errorMessage.textContent = isValid ? '' : 'Vui lòng điền đầy đủ tất cả các mục!';
-            errorMessage.style.display = isValid ? 'none' : 'block';
+        function checkForm() {
+            const overall = document.querySelector('input[name="entry.1445017922"]:checked');
+            const food = document.querySelector('input[name="entry.227979620"]:checked');
+            const service = document.querySelector('input[name="entry.1064781828"]:checked');
+            const clean = document.querySelector('input[name="entry.2040576421"]:checked');
+            const price = document.querySelector('input[name="entry.2055784231"]:checked');
+            submitBtn.disabled = !(overall && food && service && clean && price);
         }
 
-        // Add event listeners for real-time validation
-        document.querySelectorAll('input[type="radio"]').forEach(input => {
-            input.addEventListener('change', validateForm);
-        });
-        document.getElementById('price').addEventListener('change', validateForm);
-        commentInput.addEventListener('input', () => {
-            commentCount.textContent = commentInput.value.length;
-            validateForm();
-        });
-
-        // Initialize validation on page load
-        validateForm();
-
-        previousBtn.addEventListener('click', () => {
-            window.history.back();
-        });
-
-        reviewForm.addEventListener('submit', async (e) => {
-            e.preventDefault();
+        reviewForm.addEventListener('change', checkForm);
+        reviewForm.addEventListener('submit', (e) => {
             if (!submitBtn.disabled) {
                 errorMessage.style.display = 'none';
-                try {
-                    // Comment out fetch for testing without backend
-                    /*
-                    const response = await fetch('/api/submit/review', {
-                        method: 'POST',
-                        body: new FormData(reviewForm)
-                    });
-                    if (response.ok) {
-                        window.location.href = 'thankyou.html';
-                    } else {
-                        throw new Error('Submission failed');
-                    }
-                    */
-                    // Temporary redirect for testing
+                setTimeout(() => {
                     window.location.href = 'thankyou.html';
-                } catch (err) {
-                    errorMessage.textContent = 'Lỗi khi gửi đánh giá. Vui lòng thử lại!';
-                    errorMessage.style.display = 'block';
-                    console.error('Submission error:', err);
-                }
+                }, 1000);
             } else {
-                errorMessage.textContent = 'Vui lòng điền đầy đủ tất cả các mục!';
+                e.preventDefault();
                 errorMessage.style.display = 'block';
             }
         });
+
+        checkForm();
     </script>
 </body>
+
 </html>

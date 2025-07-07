@@ -13,192 +13,6 @@
     <meta property="og:description" content="Khám phá bản đồ ẩm thực Việt Nam cùng Tuyến Vương trên Bản Đồ Ăn.">
     <meta property="og:image" content="https://bandoan.vn/images/anhLogo.png">
     <meta property="og:url" content="https://bandoan.vn/foodmap/bandoan.html">
-    <style>
-        #map {
-            height: 400px;
-            width: 100%;
-            margin-bottom: 2rem;
-        }
-
-        .map-controls {
-            display: flex;
-            gap: 1rem;
-            margin-bottom: 2rem;
-            flex-wrap: wrap;
-        }
-
-        .map-controls select,
-        .map-controls input {
-            padding: 0.5rem;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 1rem;
-        }
-
-        .map-controls button {
-            padding: 0.5rem 1rem;
-            background-color: #e64a19;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .map-controls button:hover {
-            background-color: #ff7043;
-        }
-
-        .map-controls select:focus,
-        .map-controls input:focus,
-        .map-controls button:focus {
-            outline: 2px solid #e64a19;
-            outline-offset: 2px;
-        }
-
-        .filters {
-            display: flex;
-            gap: 1rem;
-            margin-bottom: 2rem;
-        }
-
-        #list {
-            margin-top: 2rem;
-        }
-
-        .place {
-            background: #fff;
-            border-radius: 5px;
-            margin-bottom: 1.5rem;
-            padding: 1rem;
-            color: #555;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            display: flex;
-            gap: 1rem;
-        }
-
-        .place img {
-            width: 100%;
-            max-width: 250px;
-            height: 175px;
-            max-height: 250px;
-            object-fit: cover;
-            border-radius: 8px;
-            align-self: center;
-        }
-
-        .place-content {
-            flex: 1;
-        }
-
-        .place-content h3 {
-            font-size: 1.5rem;
-            color: #e64a19;
-            margin: 0.5rem 0;
-        }
-
-        .place-content p {
-            margin: 0.3rem 0;
-        }
-
-        .rating {
-            color: #ffca28;
-        }
-
-        iframe {
-            border: 0;
-            width: 100%;
-            height: 150px;
-        }
-
-        .faq-section {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 2rem;
-            background: #1a1a1a;
-            color: #fff;
-            border-radius: 10px;
-        }
-
-        .faq-section h2 {
-            font-size: 2.5rem;
-            color: #ff6200;
-            border-bottom: 2px solid #ff6200;
-            padding-bottom: 0.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .faq-item {
-            border-bottom: 1px solid #333;
-            margin-bottom: 1rem;
-        }
-
-        .faq-question {
-            font-size: 1.2rem;
-            padding: 1rem;
-            cursor: pointer;
-            color: #fff;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .faq-question:hover,
-        .faq-question:focus {
-            color: #ff6200;
-        }
-
-        .faq-answer {
-            padding: 0 1rem 1rem 1rem;
-            display: none;
-            color: #ccc;
-        }
-
-        .faq-answer.active {
-            display: block;
-        }
-
-        .faq-toggle {
-            font-size: 1.2rem;
-            transition: transform 0.3s ease;
-        }
-
-        .faq-toggle.rotated {
-            transform: rotate(180deg);
-        }
-
-        #map-fallback {
-            text-align: center;
-            color: #e64a19;
-            margin: 2rem 0;
-        }
-
-        @media (max-width: 768px) {
-            #map {
-                height: 300px;
-            }
-
-            .place {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .place img {
-                max-width: 100%;
-            }
-
-            .map-controls,
-            .filters {
-                flex-direction: column;
-            }
-
-            .map-controls select,
-            .map-controls input,
-            .map-controls button {
-                width: 100%;
-            }
-        }
-    </style>
 </head>
 
 <body>
@@ -213,7 +27,7 @@
                 <ul>
                     <li><a href="../project.html">Home</a></li>
                     <li><a href="../blog/blog.html">Blog</a></li>
-                    <li><a href="bandoan.html">Danh Sách Quán</a></li>
+                    <li><a href="bandoan.html">Bản Đồ Ăn</a></li>
                     <li><a href="../book/book.html">Sách</a></li>
                     <li><a href="../contact/contact.html">Liên Hệ</a></li>
                 </ul>
@@ -273,7 +87,6 @@
         </div>
         <section id="list">
             <h2>Danh Sách Quán Ăn</h2>
-            <!-- All 20 eateries listed here, matching the locations array -->
             <div class="place" data-category="Bún" data-area="Hoàn Kiếm">
                 <img src="../bun_cha.jpg" alt="Bún Chả Hàng Quạt" loading="lazy">
                 <div class="place-content">
@@ -291,8 +104,6 @@
                     <p class="rating">🌟 4.3/5</p>
                 </div>
             </div>
-            <!-- Add remaining 18 eateries similarly, ensuring accurate iframe URLs -->
-            <!-- Example for one more eatery -->
             <div class="place" data-category="Mỳ" data-area="Cầu Giấy">
                 <img src="https://halotravel.vn/wp-content/uploads/2020/08/mi-van-than-ha-noi-3.jpg"
                     alt="Mỳ Vằn Thắn Xuân" loading="lazy">
@@ -338,7 +149,8 @@
                 </div>
             </div>
             <div class="place" data-category="Bánh" data-area="Bắc Từ Liêm">
-                <img src="https://toplist.vn/images/800px/thanh-nga-banh-xeo-mien-trung-333632.jpg" alt="Bánh xèo Thanh Nga" loading="lazy">
+                <img src="https://toplist.vn/images/800px/thanh-nga-banh-xeo-mien-trung-333632.jpg"
+                    alt="Bánh xèo Thanh Nga" loading="lazy">
                 <div class="place-content">
                     <h3>Bánh xèo Thanh Nga</h3>
                     <p>Địa chỉ: 18 Ngõ 56, Lê Văn Hiến, Đức Thắng, Bắc Từ Liêm, Hà Nội</p>
@@ -346,7 +158,8 @@
                 </div>
             </div>
             <div class="place" data-category="Ăn vặt" data-area="Nam Từ Liêm">
-                <img src="https://cdn.tgdd.vn/2021/09/CookRecipe/Avatar/chan-ga-nuong-muoi-ot-dau-hao-thumbnail.jpg" alt="Chân Gà Nướng A Phương" loading="lazy">
+                <img src="https://cdn.tgdd.vn/2021/09/CookRecipe/Avatar/chan-ga-nuong-muoi-ot-dau-hao-thumbnail.jpg"
+                    alt="Chân Gà Nướng A Phương" loading="lazy">
                 <div class="place-content">
                     <h3>Chân Gà Nướng A Phương</h3>
                     <p>Địa chỉ: 22 ngõ 56 Lê Quang Đạo, Nam Từ Liêm, Hà Nội</p>
@@ -354,7 +167,8 @@
                 </div>
             </div>
             <div class="place" data-category="Cơm" data-area="Đống Đa">
-                <img src="https://hotel84.com/hotel84-images/news/photo/VYTX3J18M9_combo-suon-cot-let-comtam-s.jpg" alt="Cơm Tấm Sà Bì Chưởng" loading="lazy">
+                <img src="https://hotel84.com/hotel84-images/news/photo/VYTX3J18M9_combo-suon-cot-let-comtam-s.jpg"
+                    alt="Cơm Tấm Sà Bì Chưởng" loading="lazy">
                 <div class="place-content">
                     <h3>Cơm Tấm Sà Bì Chưởng</h3>
                     <p>Địa chỉ: 86 Nguyễn Văn Tuyết, Trung Liệt, Đống Đa, Hà Nội</p>
@@ -362,7 +176,8 @@
                 </div>
             </div>
             <div class="place" data-category="Phở" data-area="Hà Đông">
-                <img src="https://live2makan.com/wp-content/uploads/2022/08/l2m-vn-2207-pho10-06.jpg" alt="Phở 10 Lý Quốc Sư" loading="lazy">
+                <img src="https://live2makan.com/wp-content/uploads/2022/08/l2m-vn-2207-pho10-06.jpg"
+                    alt="Phở 10 Lý Quốc Sư" loading="lazy">
                 <div class="place-content">
                     <h3>Phở 10 Lý Quốc Sư</h3>
                     <p>Địa chỉ: lô 06 Tố Hữu, Vạn Phúc, Hà Đông, Hà Nội</p>
@@ -370,7 +185,8 @@
                 </div>
             </div>
             <div class="place" data-category="Miến" data-area="Long Biên">
-                <img src="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_75,s_3840x3840/https://cdn.tgdd.vn/Files/2022/10/04/1473920/thu-ngay-13-quan-an-toi-quan-long-bien-sieu-hut-khach-202210040049324857.jpg" alt="Miến Trộn Gà Thắng Xoăn" loading="lazy">
+                <img src="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_75,s_3840x3840/https://cdn.tgdd.vn/Files/2022/10/04/1473920/thu-ngay-13-quan-an-toi-quan-long-bien-sieu-hut-khach-202210040049324857.jpg"
+                    alt="Miến Trộn Gà Thắng Xoăn" loading="lazy">
                 <div class="place-content">
                     <h3>Miến Trộn Gà Thắng Xoăn</h3>
                     <p>Địa chỉ: 158 Ngọc Lâm, Long Biên, Hà Nội</p>
@@ -378,7 +194,8 @@
                 </div>
             </div>
             <div class="place" data-category="Xôi" data-area="Hoàn Kiếm">
-                <img src="https://truongdaihocvietnam.com/wp-content/uploads/2023/10/xoi-yen3.jpg" alt="Xôi Yến" loading="lazy">
+                <img src="https://truongdaihocvietnam.com/wp-content/uploads/2023/10/xoi-yen3.jpg" alt="Xôi Yến"
+                    loading="lazy">
                 <div class="place-content">
                     <h3>Xôi Yến</h3>
                     <p>Địa chỉ: 35B Nguyễn Hữu Huân, Lý Thái Tổ, Hoàn Kiếm, Hà Nội</p>
@@ -386,7 +203,8 @@
                 </div>
             </div>
             <div class="place" data-category="Bánh" data-area="Hoàng Mai">
-                <img src="https://static.vinwonders.com/production/banh-cuon-thanh-tri-1.jpg" alt="Bánh Cuốn Thanh Trì Cô Lan" loading="lazy">
+                <img src="https://static.vinwonders.com/production/banh-cuon-thanh-tri-1.jpg"
+                    alt="Bánh Cuốn Thanh Trì Cô Lan" loading="lazy">
                 <div class="place-content">
                     <h3>Bánh Cuốn Thanh Trì Cô Lan</h3>
                     <p>Địa chỉ: 30 Thanh Đàm, Thanh Trì, Hoàng Mai, Hà Nội</p>
@@ -394,7 +212,8 @@
                 </div>
             </div>
             <div class="place" data-category="Ăn vặt" data-area="Cầu Giấy">
-                <img src="https://langcomvong.com/uploads/images/com-lang-vong.jpg" alt="Cốm Làng Vòng Bà Hoản" loading="lazy">
+                <img src="https://langcomvong.com/uploads/images/com-lang-vong.jpg" alt="Cốm Làng Vòng Bà Hoản"
+                    loading="lazy">
                 <div class="place-content">
                     <h3>Cốm Làng Vòng Bà Hoản</h3>
                     <p>Địa chỉ: 36 Ngõ 63, Xuân Thủy, Dịch Vọng Hậu, Cầu Giấy, Hà Nội</p>
@@ -402,7 +221,8 @@
                 </div>
             </div>
             <div class="place" data-category="Bún" data-area="Hoàn Kiếm">
-                <img src="https://static.vinwonders.com/2023/01/bun-dau-mam-tom-01.jpg" alt="Bún đậu mắm tôm Hàng Khay" loading="lazy">
+                <img src="https://static.vinwonders.com/2023/01/bun-dau-mam-tom-01.jpg" alt="Bún đậu mắm tôm Hàng Khay"
+                    loading="lazy">
                 <div class="place-content">
                     <h3>Bún Đậu Mắm Tôm Hàng Khay</h3>
                     <p>Địa chỉ: cuối ngõ 29 Hàng Khay, Hoàn Kiếm, Hà Nội</p>
@@ -410,7 +230,8 @@
                 </div>
             </div>
             <div class="place" data-category="Ăn vặt" data-area="Hoàn Kiếm">
-                <img src="https://statics.vinpearl.com/kem-trang-tien-2_1681547009.jpg" alt="Kem Tràng Tiền" loading="lazy">
+                <img src="https://statics.vinpearl.com/kem-trang-tien-2_1681547009.jpg" alt="Kem Tràng Tiền"
+                    loading="lazy">
                 <div class="place-content">
                     <h3>Kem Tràng Tiền</h3>
                     <p>Địa chỉ: 35 Tràng Tiền, Hoàn Kiếm, Hà Nội</p>
@@ -418,7 +239,8 @@
                 </div>
             </div>
             <div class="place" data-category="Đồ uống" data-area="Thanh Xuân">
-                <img src="https://dayconkieunhat.vn/wp-content/uploads/2019/10/bia-hoi-corner-1.jpg" alt="Bia Hơi Hải Xồm" loading="lazy">
+                <img src="https://dayconkieunhat.vn/wp-content/uploads/2019/10/bia-hoi-corner-1.jpg"
+                    alt="Bia Hơi Hải Xồm" loading="lazy">
                 <div class="place-content">
                     <h3>Bia Hơi Hải Xồm</h3>
                     <p>Địa chỉ: 86B Lê Trọng Tấn, Thanh Xuân, Hà Nội</p>
@@ -426,7 +248,8 @@
                 </div>
             </div>
             <div class="place" data-category="Ăn vặt" data-area="Hoàn Kiếm">
-                <img src="https://toplist.vn/images/800px/nem-chua-ran-36-tam-thuong-813824.jpg" alt="Nem chua rén 36" loading="lazy">
+                <img src="https://toplist.vn/images/800px/nem-chua-ran-36-tam-thuong-813824.jpg" alt="Nem chua rén 36"
+                    loading="lazy">
                 <div class="place-content">
                     <h3>Nem Chua Rán 36</h3>
                     <p>Địa chỉ: 36 Ngõ Tạm Thương, Hoàn Kiếm, Hà Nội</p>
@@ -434,14 +257,14 @@
                 </div>
             </div>
             <div class="place" data-category="Đồ uống" data-area="Hoàn Kiếm">
-                <img src="https://lyoncoffee.com.vn/wp-content/uploads/cafe-giang-ha-noi-3.jpg" alt="Café Giảng" loading="lazy">
+                <img src="https://lyoncoffee.com.vn/wp-content/uploads/cafe-giang-ha-noi-3.jpg" alt="Café Giảng"
+                    loading="lazy">
                 <div class="place-content">
                     <h3>Café Giảng</h3>
                     <p>Địa chỉ: 39 Nguyễn Hữu Huân, Hoàn Kiếm, Hà Nội</p>
                     <p class="rating">🌟 4.4/5</p>
                 </div>
             </div>
-            <!-- Repeat for other eateries, ensuring correct data-category, data-area, and iframe URLs -->
         </section>
         <section class="faq-section">
             <h2>Các Câu Hỏi Thường Gặp</h2>
@@ -508,7 +331,7 @@
                 <ul>
                     <li><a href="../project.html">Home</a></li>
                     <li><a href="../blog/blog.html">Blog</a></li>
-                    <li><a href="bandoan.html">Danh sách quán</a></li>
+                    <li><a href="bandoan.html">Bản Đồ Ăn</a></li>
                     <li><a href="../book/book.html">Sách</a></li>
                     <li><a href="../contact/contact.html">Liên hệ</a></li>
                 </ul>
@@ -548,26 +371,26 @@
             });
 
             const locations = [
-                { name: "Bún Chả Hàng Quạt", address: "74 Hàng Quạt, Hoàn Kiếm, Hà Nội", rating: "4.3/5", lat: 21.0326, lng: 105.8461, region: "hanoi", category: "Bún", area: "Hoàn Kiếm", link: "blog/buncha.html", image: "images/bun_cha.jpg", hours: "07:00 - 21:00" },
-                { name: "Phở Thìn Lò Đúc", address: "13 Lò Đúc, Hai Bà Trưng, Hà Nội", rating: "4.3/5", lat: 21.0181, lng: 105.8527, region: "hanoi", category: "Phở", area: "Hai Bà Trưng", link: "blog/pho_thin.html", image: "images/pho_thin.jpg", hours: "06:00 - 22:00" },
-                { name: "Mỳ Vằn Thắn Xuân", address: "101B3 Tô Hiệu, Cầu Giấy, Hà Nội", rating: "4.4/5", lat: 21.0445, lng: 105.7928, region: "hanoi", category: "Mỳ", area: "Cầu Giấy", link: "blog/my_van_than.html", image: "images/my_van_than.jpg", hours: "08:00 - 20:00" },
-                { name: "Matcha Latte", address: "272 Võ Chí Công, Tây Hồ, Hà Nội", rating: "4.2/5", lat: 21.0763, lng: 105.8014, region: "hanoi", category: "Đồ uống", area: "Tây Hồ", link: "blog/matcha_latte.html", image: "images/matcha_latte.jpg", hours: "09:00 - 23:00" },
-                { name: "Bánh Mì Nem Khoai", address: "08 ngõ 28 Hương Viên, Hai Bà Trưng, Hà Nội", rating: "4.9/5", lat: 21.0117, lng: 105.8556, region: "hanoi", category: "Bánh", area: "Hai Bà Trưng", link: "blog/banh_mi_nem_khoai.html", image: "images/banh_mi_nem_khoai.jpg", hours: "07:00 - 19:00" },
-                { name: "Xôi Sườn Cay", address: "628 Trường Chinh, Thanh Xuân, Hà Nội", rating: "4.1/5", lat: 21.0028, lng: 105.8213, region: "hanoi", category: "Xôi", area: "Thanh Xuân", link: "blog/xoi_suon_cay.html", image: "images/xoi_suon_cay.jpg", hours: "06:00 - 14:00" },
-                { name: "Mỳ Gà Tần Cô Biên", address: "Ngõ 285 Đội Cấn, Quận Ba Đình, Hà Nội", rating: "4.2/5", lat: 21.0357, lng: 105.8162, region: "hanoi", category: "Mỳ", area: "Ba Đình", link: "blog/my_ga_tan.html", image: "images/my_ga_tan.jpg", hours: "08:00 - 21:00" },
-                { name: "Bánh xèo Thanh Nga", address: "18 Ngõ 56, Lê Văn Hiến, Đức Thắng, Bắc Từ Liêm, Hà Nội", rating: "4.0/5", lat: 21.0755, lng: 105.7710, region: "hanoi", category: "Bánh", area: "Bắc Từ Liêm", link: "blog/banh_xeo_thanh_nga.html", image: "images/banh_xeo_thanh_nga.jpg", hours: "10:00 - 20:00" },
-                { name: "Chân Gà Nướng A Phương", address: "22 ngõ 56 Lê Quang Đạo, Nam Từ Liêm, Hà Nội", rating: "4.4/5", lat: 21.0115, lng: 105.7673, region: "hanoi", category: "Ăn vặt", area: "Nam Từ Liêm", link: "blog/chan_ga_nuong.html", image: "images/chan_ga_nuong.jpg", hours: "12:00 - 22:00" },
-                { name: "Cơm Tấm Sà Bì Chưởng", address: "86 Nguyễn Văn Tuyết, Trung Liệt, Đống Đa, Hà Nội", rating: "4.8/5", lat: 21.0093, lng: 105.8181, region: "hanoi", category: "Cơm", area: "Đống Đa", link: "blog/com_tam_sabi.html", image: "images/com_tam_sabi.jpg", hours: "07:00 - 20:00" },
-                { name: "Phở 10 Lý Quốc Sư", address: "lô 06 Tố Hữu, Vạn Phúc, Hà Đông, Hà Nội", rating: "4.1/5", lat: 20.9840, lng: 105.7698, region: "hanoi", category: "Phở", area: "Hà Đông", link: "blog/pho_10.html", image: "images/pho_10.jpg", hours: "06:00 - 21:00" },
-                { name: "Miến Trộn Gà Thắng Xoăn", address: "158 Ngọc Lâm, Long Biên, Hà Nội", rating: "4.4/5", lat: 21.0461, lng: 105.8680, region: "hanoi", category: "Miến", area: "Long Biên", link: "blog/mien_tron_ga.html", image: "images/mien_tron_ga.jpg", hours: "08:00 - 19:00" },
-                { name: "Xôi Yến", address: "35B Nguyễn Hữu Huân, Lý Thái Tổ, Hoàn Kiếm, Hà Nội", rating: "4.1/5", lat: 21.0337, lng: 105.8496, region: "hanoi", category: "Xôi", area: "Hoàn Kiếm", link: "blog/xoi_yen.html", image: "images/xoi_yen.jpg", hours: "06:00 - 14:00" },
-                { name: "Bánh Cuốn Thanh Trì Cô Lan", address: "30 Thanh Đàm, Thanh Trì, Hoàng Mai, Hà Nội", rating: "4.3/5", lat: 20.9932, lng: 105.8882, region: "hanoi", category: "Bánh", area: "Hoàng Mai", link: "blog/banh_cuon_thanh_tri.html", image: "images/banh_cuon_thanh_tri.jpg", hours: "07:00 - 18:00" },
-                { name: "Cốm Làng Vòng Bà Hoản", address: "36 Ngõ 63, Xuân Thủy, Dịch Vọng Hậu, Cầu Giấy, Hà Nội", rating: "4.8/5", lat: 21.0358, lng: 105.7855, region: "hanoi", category: "Ăn vặt", area: "Cầu Giấy", link: "blog/com_lang_vong.html", image: "images/com_lang_vong.jpg", hours: "08:00 - 17:00" },
-                { name: "Bún Đậu Mắm Tôm Hàng Khay", address: "cuối ngõ 29 Hàng Khay, Hoàn Kiếm, Hà Nội", rating: "4.3/5", lat: 21.0251, lng: 105.8520, region: "hanoi", category: "Bún", area: "Hoàn Kiếm", link: "blog/bun_dau_mam_tom.html", image: "images/bun_dau_mam_tom.jpg", hours: "10:00 - 21:00" },
-                { name: "Kem Tràng Tiền", address: "35 Tràng Tiền, Hoàn Kiếm, Hà Nội", rating: "4.4/5", lat: 21.0220, lng: 105.8554, region: "hanoi", category: "Ăn vặt", area: "Hoàn Kiếm", link: "blog/kem_trang_tien.html", image: "images/kem_trang_tien.jpg", hours: "09:00 - 22:00" },
-                { name: "Bia Hơi Hải Xồm", address: "86B Lê Trọng Tấn, Thanh Xuân, Hà Nội", rating: "4.0/5", lat: 20.9985, lng: 105.8094, region: "hanoi", category: "Đồ uống", area: "Thanh Xuân", link: "blog/bia_hoi_hai_xom.html", image: "images/bia_hoi_hai_xom.jpg", hours: "11:00 - 23:00" },
-                { name: "Nem Chua Rán 36", address: "36 Ngõ Tạm Thương, Hoàn Kiếm, Hà Nội", rating: "4.2/5", lat: 21.0314, lng: 105.8451, region: "hanoi", category: "Ăn vặt", area: "Hoàn Kiếm", link: "blog/nem_chua_ran.html", image: "images/nem_chua_ran.jpg", hours: "12:00 - 20:00" },
-                { name: "Café Giảng", address: "39 Nguyễn Hữu Huân, Hoàn Kiếm, Hà Nội", rating: "4.4/5", lat: 21.0335, lng: 105.8496, region: "hanoi", category: "Đồ uống", area: "Hoàn Kiếm", link: "blog/cafe_giang.html", image: "images/cafe_giang.jpg", hours: "07:00 - 22:00" }
+                { name: "Bún Chả Hàng Quạt", address: "74 Hàng Quạt, Hoàn Kiếm, Hà Nội", rating: "4.3/5", lat: 21.0326, lng: 105.8461, region: "hanoi", category: "Bún", area: "Hoàn Kiếm", hours: "07:00 - 21:00" },
+                { name: "Phở Thìn Lò Đúc", address: "13 Lò Đúc, Hai Bà Trưng, Hà Nội", rating: "4.3/5", lat: 21.0181, lng: 105.8527, region: "hanoi", category: "Phở", area: "Hai Bà Trưng", hours: "06:00 - 22:00" },
+                { name: "Mỳ Vằn Thắn Xuân", address: "101B3 Tô Hiệu, Cầu Giấy, Hà Nội", rating: "4.4/5", lat: 21.0445, lng: 105.7928, region: "hanoi", category: "Mỳ", area: "Cầu Giấy", hours: "08:00 - 20:00" },
+                { name: "Matcha Latte", address: "272 Võ Chí Công, Tây Hồ, Hà Nội", rating: "4.2/5", lat: 21.0763, lng: 105.8014, region: "hanoi", category: "Đồ uống", area: "Tây Hồ", hours: "09:00 - 23:00" },
+                { name: "Bánh Mì Nem Khoai", address: "08 ngõ 28 Hương Viên, Hai Bà Trưng, Hà Nội", rating: "4.9/5", lat: 21.0117, lng: 105.8556, region: "hanoi", category: "Bánh", area: "Hai Bà Trưng", hours: "07:00 - 19:00" },
+                { name: "Xôi Sườn Cay", address: "628 Trường Chinh, Thanh Xuân, Hà Nội", rating: "4.1/5", lat: 21.0028, lng: 105.8213, region: "hanoi", category: "Xôi", area: "Thanh Xuân", hours: "06:00 - 14:00" },
+                { name: "Mỳ Gà Tần Cô Biên", address: "Ngõ 285 Đội Cấn, Quận Ba Đình, Hà Nội", rating: "4.2/5", lat: 21.0357, lng: 105.8162, region: "hanoi", category: "Mỳ", area: "Ba Đình", hours: "08:00 - 21:00" },
+                { name: "Bánh xèo Thanh Nga", address: "18 Ngõ 56, Lê Văn Hiến, Đức Thắng, Bắc Từ Liêm, Hà Nội", rating: "4.0/5", lat: 21.0755, lng: 105.7710, region: "hanoi", category: "Bánh", area: "Bắc Từ Liêm", hours: "10:00 - 20:00" },
+                { name: "Chân Gà Nướng A Phương", address: "22 ngõ 56 Lê Quang Đạo, Nam Từ Liêm, Hà Nội", rating: "4.4/5", lat: 21.0115, lng: 105.7673, region: "hanoi", category: "Ăn vặt", area: "Nam Từ Liêm", hours: "12:00 - 22:00" },
+                { name: "Cơm Tấm Sà Bì Chưởng", address: "86 Nguyễn Văn Tuyết, Trung Liệt, Đống Đa, Hà Nội", rating: "4.8/5", lat: 21.0093, lng: 105.8181, region: "hanoi", category: "Cơm", area: "Đống Đa", hours: "07:00 - 20:00" },
+                { name: "Phở 10 Lý Quốc Sư", address: "lô 06 Tố Hữu, Vạn Phúc, Hà Đông, Hà Nội", rating: "4.1/5", lat: 20.9840, lng: 105.7698, region: "hanoi", category: "Phở", area: "Hà Đông", hours: "06:00 - 21:00" },
+                { name: "Miến Trộn Gà Thắng Xoăn", address: "158 Ngọc Lâm, Long Biên, Hà Nội", rating: "4.4/5", lat: 21.0461, lng: 105.8680, region: "hanoi", category: "Miến", area: "Long Biên", hours: "08:00 - 19:00" },
+                { name: "Xôi Yến", address: "35B Nguyễn Hữu Huân, Lý Thái Tổ, Hoàn Kiếm, Hà Nội", rating: "4.1/5", lat: 21.0337, lng: 105.8496, region: "hanoi", category: "Xôi", area: "Hoàn Kiếm", hours: "06:00 - 14:00" },
+                { name: "Bánh Cuốn Thanh Trì Cô Lan", address: "30 Thanh Đàm, Thanh Trì, Hoàng Mai, Hà Nội", rating: "4.3/5", lat: 20.9932, lng: 105.8882, region: "hanoi", category: "Bánh", area: "Hoàng Mai", hours: "07:00 - 18:00" },
+                { name: "Cốm Làng Vòng Bà Hoản", address: "36 Ngõ 63, Xuân Thủy, Dịch Vọng Hậu, Cầu Giấy, Hà Nội", rating: "4.8/5", lat: 21.0358, lng: 105.7855, region: "hanoi", category: "Ăn vặt", area: "Cầu Giấy", hours: "08:00 - 17:00" },
+                { name: "Bún Đậu Mắm Tôm Hàng Khay", address: "cuối ngõ 29 Hàng Khay, Hoàn Kiếm, Hà Nội", rating: "4.3/5", lat: 21.0251, lng: 105.8520, region: "hanoi", category: "Bún", area: "Hoàn Kiếm", hours: "10:00 - 21:00" },
+                { name: "Kem Tràng Tiền", address: "35 Tràng Tiền, Hoàn Kiếm, Hà Nội", rating: "4.4/5", lat: 21.0220, lng: 105.8554, region: "hanoi", category: "Ăn vặt", area: "Hoàn Kiếm", hours: "09:00 - 22:00" },
+                { name: "Bia Hơi Hải Xồm", address: "86B Lê Trọng Tấn, Thanh Xuân, Hà Nội", rating: "4.0/5", lat: 20.9985, lng: 105.8094, region: "hanoi", category: "Đồ uống", area: "Thanh Xuân", hours: "11:00 - 23:00" },
+                { name: "Nem Chua Rán 36", address: "36 Ngõ Tạm Thương, Hoàn Kiếm, Hà Nội", rating: "4.2/5", lat: 21.0314, lng: 105.8451, region: "hanoi", category: "Ăn vặt", area: "Hoàn Kiếm", hours: "12:00 - 20:00" },
+                { name: "Café Giảng", address: "39 Nguyễn Hữu Huân, Hoàn Kiếm, Hà Nội", rating: "4.4/5", lat: 21.0335, lng: 105.8496, region: "hanoi", category: "Đồ uống", area: "Hoàn Kiếm", hours: "07:00 - 22:00" }
 
             ];
 
@@ -596,12 +419,6 @@
                         color: #e64a19;
                         font-weight: bold;
                     ">${location.name}</h3>
-                    <img src="${location.image}" alt="${location.name}" style="
-                        max-width: 100%;
-                        height: auto;
-                        border-radius: 6px;
-                        margin-bottom: 8px;
-                    ">
                     <p style="
                         margin: 4px 0;
                         font-size: 14px;
@@ -614,14 +431,6 @@
                         margin: 4px 0;
                         font-size: 14px;
                     "><strong>Giờ mở cửa:</strong> ${location.hours}</p>
-                    <a href="${location.link}" style="
-                        display: inline-block;
-                        margin: 8px 0;
-                        color: #e64a19;
-                        font-size: 14px;
-                        text-decoration: none;
-                        font-weight: bold;
-                    " onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Xem chi tiết</a>
                     <button onclick="window.location.href='../feedback/feedback.html?restaurant=${encodeURIComponent(location.name)}'" style="
                         display: block;
                         width: 100%;
