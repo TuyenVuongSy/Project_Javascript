@@ -31,6 +31,8 @@
                     <li><a href="../food map/bandoan.html">Bản Đồ Ăn</a></li>
                     <li><a href="../book/book.html">Sách</a></li>
                     <li><a href="../contact/contact.html">Liên Hệ</a></li>
+                    <li><a href="../signin.html" id="loginBtn">Đăng nhập</a></li>
+                    <li><a href="#" id="logoutBtn" style="display: none;">Đăng xuất</a></li>
                 </ul>
             </nav>
         </div>
@@ -242,6 +244,37 @@
             <a href="mailto:tuyenvs.ptit@gmail.com" aria-label="Send us an email"><i class="fas fa-envelope"></i></a>
         </div>
     </footer>
+    <script>
+        // JavaScript xử lý trạng thái đăng nhập
+        document.addEventListener('DOMContentLoaded', () => {
+            const loginBtn = document.getElementById('loginBtn');
+            const logoutBtn = document.getElementById('logoutBtn');
+
+            // Kiểm tra trạng thái đăng nhập từ localStorage
+            const user = JSON.parse(localStorage.getItem('user'));
+            if (user) {
+                loginBtn.style.display = 'none';
+                logoutBtn.style.display = 'inline';
+            }
+
+            // Xử lý đăng xuất
+            logoutBtn.addEventListener('click', () => {
+                localStorage.removeItem('user');
+                loginBtn.style.display = 'inline';
+                logoutBtn.style.display = 'none';
+                alert('Đã đăng xuất!');
+                window.location.href = '../signin.html';
+            });
+
+            logoutBtn.addEventListener('click', () => {
+                localStorage.removeItem('admin');
+                loginBtn.style.display = 'inline';
+                logoutBtn.style.display = 'none';
+                alert('Đã đăng xuất!');
+                window.location.href = '../signin.html';
+            });
+        });
+    </script>
 </body>
 
 </html>
