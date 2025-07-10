@@ -145,7 +145,6 @@
             messageElement.style.display = 'block';
             messageElement.textContent = `Cảm ơn ${data.firstname} ${data.lastname}! Email của bạn với tiêu đề "${data.subject}" đã được gửi thành công!`;
             
-            // Tự động ẩn thông báo sau 5 giây
             setTimeout(() => {
                 messageElement.style.display = 'none';
             }, 5000);
@@ -153,19 +152,16 @@
             form.reset();
         }
 
-        // JavaScript xử lý trạng thái đăng nhập
         document.addEventListener('DOMContentLoaded', () => {
             const loginBtn = document.getElementById('loginBtn');
             const logoutBtn = document.getElementById('logoutBtn');
 
-            // Kiểm tra trạng thái đăng nhập từ localStorage
             const user = JSON.parse(localStorage.getItem('user'));
             if (user) {
                 loginBtn.style.display = 'none';
                 logoutBtn.style.display = 'inline';
             }
 
-            // Xử lý đăng xuất
             logoutBtn.addEventListener('click', () => {
                 localStorage.removeItem('user');
                 loginBtn.style.display = 'inline';

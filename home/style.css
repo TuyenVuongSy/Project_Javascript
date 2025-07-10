@@ -12,7 +12,6 @@ body {
     line-height: 1.6;
 }
 
-/* Header */
 header {
     background: linear-gradient(to right, #E6521F, #EA2F14);
     color: white;
@@ -80,7 +79,6 @@ nav ul li a:hover {
     color: #ffebee;
 }
 
-/* Stories Section */
 #stories {
     max-width: 1200px;
     margin: 2rem auto;
@@ -138,8 +136,6 @@ nav ul li a:hover {
     color: #E6521F;
 }
 
-
-/* List */
 #list {
     max-width: 1200px;
     margin: 2rem auto;
@@ -247,7 +243,6 @@ nav ul li a:hover {
 
 .blog-item {
     display: none;
-    /* Hidden by default, shown via JavaScript */
     padding: 1rem;
     background: #f9f9f9;
     border-left: 4px solid #EA2F14;
@@ -502,7 +497,6 @@ footer {
     color: #ffebee;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .footer-container {
         flex-direction: column;

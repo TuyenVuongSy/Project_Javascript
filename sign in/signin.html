@@ -369,12 +369,10 @@
         </div>
     </div>
     <script>
-        // Chuyển đổi giữa Sign In và Sign Up
         document.querySelector('.img-btn').addEventListener('click', function () {
             document.querySelector('.cont').classList.toggle('s-signup');
         });
 
-        // Xử lý đăng ký
         document.getElementById('signup-btn').addEventListener('click', function () {
             const name = document.getElementById('signup-name').value;
             const email = document.getElementById('signup-email').value;
@@ -387,7 +385,6 @@
             }
 
             if (name && email && password) {
-                // Giả lập đăng ký (lưu vào localStorage)
                 localStorage.setItem('user', JSON.stringify({ email, role: 'user' }));
                 alert('Đăng ký thành công! Đang chuyển hướng...');
                 window.location.href = '../home/project.html';
@@ -396,12 +393,10 @@
             }
         });
 
-        // Xử lý đăng nhập
         document.getElementById('signin-btn').addEventListener('click', function () {
             const email = document.getElementById('signin-email').value;
             const password = document.getElementById('signin-password').value;
 
-            // Logic giả lập xác thực
             if (email === 'admin@admin.com' && password === 'admin123') {
                 localStorage.setItem('user', JSON.stringify({ email, role: 'admin' }));
                 alert('Đăng nhập thành công với quyền Admin!');
@@ -415,7 +410,6 @@
             }
         });
 
-        // Xử lý đăng nhập với tư cách khách
         document.getElementById('guest-login-btn').addEventListener('click', function () {
             localStorage.setItem('user', JSON.stringify({ email: 'guest', role: 'guest' }));
             alert('Đăng nhập với tư cách khách!');

@@ -12,7 +12,6 @@ body {
     line-height: 1.6;
 }
 
-/* Header */
 header {
     background: linear-gradient(to right, #ff7043, #ff4000);
     color: white;
@@ -80,7 +79,6 @@ nav ul li a:hover {
     color: #ffebee;
 }
 
-/* Map Content */
 .map-content {
     max-width: 1200px;
     margin: 2rem auto;
@@ -103,7 +101,6 @@ nav ul li a:hover {
     line-height: 1.7;
 }
 
-/* Map Controls and Filters */
 .map-controls,
 .filters {
     display: flex;
@@ -135,14 +132,12 @@ nav ul li a:hover {
     background-color: #ff7043;
 }
 
-/* Map */
 #map {
     height: 400px;
     width: 100%;
     margin-bottom: 2rem;
 }
 
-/* Map Locations */
 .map-locations {
     background: #fff;
     padding: 1rem;
@@ -173,7 +168,6 @@ nav ul li a:hover {
     color: #ff7043;
 }
 
-/* List */
 #list {
     max-width: 1200px;
     margin: 2rem auto;
@@ -244,7 +238,6 @@ nav ul li a:hover {
     font-size: 0.9rem;
 }
 
-/* FAQ Section */
 .faq-section {
     max-width: 1200px;
     margin: 2rem auto;
@@ -300,7 +293,6 @@ nav ul li a:hover {
     transform: rotate(180deg);
 }
 
-/* Footer */
 footer {
     background: #000;
     color: white;
@@ -399,7 +391,6 @@ footer {
     color: #ffebee;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .footer-container {
         flex-direction: column;

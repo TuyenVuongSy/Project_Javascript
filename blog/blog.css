@@ -12,7 +12,6 @@ body {
     line-height: 1.6;
 }
 
-/* Header */
 header {
     background: linear-gradient(to right, #E6521F, #EA2F14);
     color: white;
@@ -79,7 +78,6 @@ nav ul li a {
 nav ul li a:hover {
     color: #ffebee;
 }
-
 
 .blog-content {
     max-width: 1200px;
@@ -277,7 +275,6 @@ footer {
     color: #ffebee;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .footer-container {
         flex-direction: column;

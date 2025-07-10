@@ -229,19 +229,16 @@
         </div>
     </footer>
     <script>
-        // JavaScript xử lý trạng thái đăng nhập
         document.addEventListener('DOMContentLoaded', () => {
             const loginBtn = document.getElementById('loginBtn');
             const logoutBtn = document.getElementById('logoutBtn');
 
-            // Kiểm tra trạng thái đăng nhập từ localStorage
             const user = JSON.parse(localStorage.getItem('user'));
             if (user) {
                 loginBtn.style.display = 'none';
                 logoutBtn.style.display = 'inline';
             }
 
-            // Xử lý đăng xuất
             logoutBtn.addEventListener('click', () => {
                 localStorage.removeItem('user');
                 loginBtn.style.display = 'inline';

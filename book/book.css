@@ -12,7 +12,6 @@ body {
     line-height: 1.6;
 }
 
-/* Header */
 header {
     background: linear-gradient(to right, #E6521F, #EA2F14);
     color: white;
@@ -200,16 +199,12 @@ footer {
     width: 100%;
     height: 100%;
     z-index: 1;
-    /* Places overlay behind content */
 }
 
 .main-story {
     position: relative;
-    /* Ensures content stays above overlay */
     z-index: 2;
-    /* Places content above the overlay */
     background: rgba(255, 255, 255, 0.9);
-    /* Slight background for readability */
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -288,7 +283,6 @@ footer {
     background-color: #E6521F;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .footer-container {
         flex-direction: column;
