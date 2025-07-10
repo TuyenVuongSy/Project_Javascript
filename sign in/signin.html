@@ -168,7 +168,7 @@
             top: 0;
             width: 900px;
             height: 100%;
-            background-image: url(Vietnam\ food\ dump\ scrapbook.jpg);
+            background-image: url(../img/Vietnam\ food\ dump\ scrapbook.jpg);
             background-size: cover;
             transition: -webkit-transform 1.2s ease-in-out;
             transition: transform 1.2s ease-in-out, -webkit-transform 1.2s ease-in-out;
@@ -390,7 +390,7 @@
                 // Giả lập đăng ký (lưu vào localStorage)
                 localStorage.setItem('user', JSON.stringify({ email, role: 'user' }));
                 alert('Đăng ký thành công! Đang chuyển hướng...');
-                window.location.href = 'project.html';
+                window.location.href = '../home/project.html';
             } else {
                 alert('Vui lòng điền đầy đủ thông tin!');
             }
@@ -405,11 +405,11 @@
             if (email === 'admin@admin.com' && password === 'admin123') {
                 localStorage.setItem('user', JSON.stringify({ email, role: 'admin' }));
                 alert('Đăng nhập thành công với quyền Admin!');
-                window.location.href = 'project.html';
+                window.location.href = '../home/project.html';
             } else if (email && password) {
                 localStorage.setItem('user', JSON.stringify({ email, role: 'user' }));
                 alert('Đăng nhập thành công với quyền Người dùng!');
-                window.location.href = 'project.html';
+                window.location.href = '../home/project.html';
             } else {
                 alert('Vui lòng nhập đầy đủ thông tin!');
             }
@@ -419,7 +419,7 @@
         document.getElementById('guest-login-btn').addEventListener('click', function () {
             localStorage.setItem('user', JSON.stringify({ email: 'guest', role: 'guest' }));
             alert('Đăng nhập với tư cách khách!');
-            window.location.href = 'project.html';
+            window.location.href = '../home/project.html';
         });
     </script>
 </body>
